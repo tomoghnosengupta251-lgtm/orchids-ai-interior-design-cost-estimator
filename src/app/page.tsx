@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
-import { ArrowRight, Sparkles, TrendingUp, Shield, Award } from "lucide-react"
-import Link from "next/link"
-import { motion } from "framer-motion"
-import { Navigation } from "@/components/Navigation"
-import { Footer } from "@/components/Footer"
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { ArrowRight, Sparkles, TrendingUp, Shield, Award } from "lucide-react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { Navigation } from "@/components/Navigation";
+import { Footer } from "@/components/Footer";
 
 export default function HomePage() {
   return (
@@ -21,15 +21,15 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center"
-          >
+            className="text-center">
+
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.6 }}
-              className="inline-block mb-6 px-6 py-2 rounded-full bg-gradient-to-r from-amber-500/20 to-orange-500/20 border border-amber-500/30"
-            >
-              <span className="text-amber-400 font-bold">✨ Premium Interior Design</span>
+              className="inline-block mb-6 px-6 py-2 rounded-full bg-gradient-to-r from-amber-500/20 to-orange-500/20 border border-amber-500/30">
+
+              <span className="text-amber-400 font-bold">✨ Premispanum Interior Design</span>
             </motion.div>
 
             <h1 className="text-7xl md:text-8xl lg:text-9xl font-black mb-8 leading-none">
@@ -48,8 +48,8 @@ export default function HomePage() {
               <Button
                 size="lg"
                 className="bg-gradient-to-r from-amber-500 via-orange-600 to-rose-600 hover:from-amber-400 hover:via-orange-500 hover:to-rose-500 text-white font-black px-12 py-8 text-xl rounded-2xl shadow-2xl shadow-amber-500/30 hover:shadow-amber-400/50 transition-all group"
-                asChild
-              >
+                asChild>
+
                 <Link href="/services">
                   Explore Services
                   <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-1 transition-transform" />
@@ -60,8 +60,8 @@ export default function HomePage() {
                 size="lg"
                 variant="outline"
                 className="border-2 border-amber-500/50 hover:border-amber-400 bg-slate-900/50 hover:bg-slate-800/80 text-amber-400 hover:text-amber-300 font-black px-12 py-8 text-xl rounded-2xl backdrop-blur-xl transition-all"
-                asChild
-              >
+                asChild>
+
                 <Link href="/calculator/1bhk">
                   <Sparkles className="w-6 h-6 mr-3" />
                   Get Free Estimate
@@ -78,8 +78,8 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-20"
-          >
+            className="text-center mb-20">
+
             <h2 className="text-5xl md:text-6xl font-black text-white mb-6">
               Why Choose <span className="text-transparent bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text">Us</span>
             </h2>
@@ -94,8 +94,8 @@ export default function HomePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              whileHover={{ y: -10 }}
-            >
+              whileHover={{ y: -10 }}>
+
               <Card className="p-10 bg-gradient-to-br from-slate-800 to-slate-900 border-2 border-amber-500/20 hover:border-amber-500/50 shadow-xl hover:shadow-2xl hover:shadow-amber-500/20 transition-all h-full">
                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center mb-6 shadow-lg shadow-amber-500/30">
                   <TrendingUp className="w-8 h-8 text-white" />
@@ -112,8 +112,8 @@ export default function HomePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              whileHover={{ y: -10 }}
-            >
+              whileHover={{ y: -10 }}>
+
               <Card className="p-10 bg-gradient-to-br from-slate-800 to-slate-900 border-2 border-orange-500/20 hover:border-orange-500/50 shadow-xl hover:shadow-2xl hover:shadow-orange-500/20 transition-all h-full">
                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-500 to-rose-600 flex items-center justify-center mb-6 shadow-lg shadow-orange-500/30">
                   <Shield className="w-8 h-8 text-white" />
@@ -130,8 +130,8 @@ export default function HomePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
-              whileHover={{ y: -10 }}
-            >
+              whileHover={{ y: -10 }}>
+
               <Card className="p-10 bg-gradient-to-br from-slate-800 to-slate-900 border-2 border-rose-500/20 hover:border-rose-500/50 shadow-xl hover:shadow-2xl hover:shadow-rose-500/20 transition-all h-full">
                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-rose-500 to-pink-600 flex items-center justify-center mb-6 shadow-lg shadow-rose-500/30">
                   <Award className="w-8 h-8 text-white" />
@@ -154,8 +154,8 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-20"
-          >
+            className="text-center mb-20">
+
             <h2 className="text-5xl md:text-6xl font-black text-white mb-6">
               Select Your <span className="text-transparent bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text">Space Type</span>
             </h2>
@@ -166,18 +166,18 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {[
-              { bhk: "1", color: "amber", desc: "Perfect for singles & couples", range: "400-600 sq ft" },
-              { bhk: "2", color: "orange", desc: "Ideal for small families", range: "700-1000 sq ft" },
-              { bhk: "3", color: "rose", desc: "Spacious family homes", range: "1100-1500 sq ft" },
-            ].map((item, index) => (
-              <motion.div
-                key={item.bhk}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ scale: 1.05, y: -10 }}
-              >
+            { bhk: "1", color: "amber", desc: "Perfect for singles & couples", range: "400-600 sq ft" },
+            { bhk: "2", color: "orange", desc: "Ideal for small families", range: "700-1000 sq ft" },
+            { bhk: "3", color: "rose", desc: "Spacious family homes", range: "1100-1500 sq ft" }].
+            map((item, index) =>
+            <motion.div
+              key={item.bhk}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+              whileHover={{ scale: 1.05, y: -10 }}>
+
                 <Link href={`/calculator/${item.bhk}bhk`}>
                   <Card className={`p-12 text-center cursor-pointer bg-gradient-to-br from-slate-800 to-slate-900 border-2 border-${item.color}-500/30 hover:border-${item.color}-500 shadow-xl hover:shadow-2xl hover:shadow-${item.color}-500/30 transition-all group`}>
                     <div className={`text-8xl font-black text-transparent bg-gradient-to-r from-${item.color}-400 to-${item.color}-600 bg-clip-text mb-4 group-hover:scale-110 transition-transform`}>
@@ -189,7 +189,7 @@ export default function HomePage() {
                   </Card>
                 </Link>
               </motion.div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -199,8 +199,8 @@ export default function HomePage() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
+            viewport={{ once: true }}>
+
             <h2 className="text-5xl md:text-6xl font-black text-white mb-6">
               Ready to Get Started?
             </h2>
@@ -210,8 +210,8 @@ export default function HomePage() {
             <Button
               size="lg"
               className="bg-gradient-to-r from-amber-500 via-orange-600 to-rose-600 hover:from-amber-400 hover:via-orange-500 hover:to-rose-500 text-white font-black px-16 py-8 text-xl rounded-2xl shadow-2xl shadow-amber-500/30 hover:shadow-amber-400/50 transition-all"
-              asChild
-            >
+              asChild>
+
               <Link href="/contact">
                 Contact Us Now
                 <ArrowRight className="w-6 h-6 ml-3" />
@@ -222,6 +222,6 @@ export default function HomePage() {
       </section>
 
       <Footer />
-    </div>
-  )
+    </div>);
+
 }
