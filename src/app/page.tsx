@@ -2,267 +2,226 @@
 
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
-import { Home, Sofa, Sparkles, Phone, MapPin } from "lucide-react"
+import { ArrowRight, Sparkles, TrendingUp, Shield, Award } from "lucide-react"
 import Link from "next/link"
 import { motion } from "framer-motion"
+import { Navigation } from "@/components/Navigation"
+import { Footer } from "@/components/Footer"
 
 export default function HomePage() {
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  }
-
-  const item = {
-    hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0 },
-  }
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-900 to-fuchsia-900">
-      <nav className="fixed top-0 w-full bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 backdrop-blur-xl z-50 border-b border-cyan-400/20">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <Home className="w-7 h-7 text-cyan-400" />
-            <span className="font-black text-2xl text-transparent bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text">
-              My Interio World
-            </span>
-          </div>
-          <div className="flex items-center gap-8">
-            <Link
-              href="#services"
-              className="text-cyan-300 hover:text-cyan-200 transition-all font-bold hover:scale-110"
-            >
-              Services
-            </Link>
-            <Link
-              href="#contact"
-              className="text-cyan-300 hover:text-cyan-200 transition-all font-bold hover:scale-110"
-            >
-              Contact
-            </Link>
-          </div>
-        </div>
-      </nav>
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+      <Navigation />
 
-      <section className="pt-32 pb-20 px-6">
-        <div className="max-w-7xl mx-auto">
+      <section className="relative pt-40 pb-32 px-6 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-900/20 via-transparent to-transparent"></div>
+        
+        <div className="max-w-6xl mx-auto relative">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
+            className="text-center"
           >
-            <motion.h1
-              className="text-6xl md:text-8xl font-black bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-8 leading-tight"
-              animate={{
-                backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
-              }}
-              transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
-              style={{ backgroundSize: "200% auto" }}
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+              className="inline-block mb-6 px-6 py-2 rounded-full bg-gradient-to-r from-amber-500/20 to-orange-500/20 border border-amber-500/30"
             >
-              Transform Your Living Space
-            </motion.h1>
-            <p className="text-xl md:text-2xl text-cyan-100 mb-12 leading-relaxed font-semibold">
-              Expert interior design and construction services tailored to your dreams. Get instant AI-powered cost
-              estimates for your perfect home.
+              <span className="text-amber-400 font-bold">✨ Premium Interior Design</span>
+            </motion.div>
+
+            <h1 className="text-7xl md:text-8xl lg:text-9xl font-black mb-8 leading-none">
+              <span className="block text-transparent bg-gradient-to-r from-amber-400 via-orange-500 to-rose-600 bg-clip-text">
+                Design Your
+              </span>
+              <span className="block text-white mt-4">Dream Space</span>
+            </h1>
+
+            <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-3xl mx-auto leading-relaxed">
+              Transform your home with expert interior design and construction services. 
+              Get instant AI-powered cost estimates tailored to your vision.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-amber-500 via-orange-600 to-rose-600 hover:from-amber-400 hover:via-orange-500 hover:to-rose-500 text-white font-black px-12 py-8 text-xl rounded-2xl shadow-2xl shadow-amber-500/30 hover:shadow-amber-400/50 transition-all group"
+                asChild
+              >
+                <Link href="/services">
+                  Explore Services
+                  <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </Button>
+
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-2 border-amber-500/50 hover:border-amber-400 bg-slate-900/50 hover:bg-slate-800/80 text-amber-400 hover:text-amber-300 font-black px-12 py-8 text-xl rounded-2xl backdrop-blur-xl transition-all"
+                asChild
+              >
+                <Link href="/calculator/1bhk">
+                  <Sparkles className="w-6 h-6 mr-3" />
+                  Get Free Estimate
+                </Link>
+              </Button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="py-24 px-6 bg-slate-900/50">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-20"
+          >
+            <h2 className="text-5xl md:text-6xl font-black text-white mb-6">
+              Why Choose <span className="text-transparent bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text">Us</span>
+            </h2>
+            <p className="text-xl text-slate-400 max-w-2xl mx-auto">
+              Experience excellence in every detail with our premium services
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              whileHover={{ y: -10 }}
+            >
+              <Card className="p-10 bg-gradient-to-br from-slate-800 to-slate-900 border-2 border-amber-500/20 hover:border-amber-500/50 shadow-xl hover:shadow-2xl hover:shadow-amber-500/20 transition-all h-full">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center mb-6 shadow-lg shadow-amber-500/30">
+                  <TrendingUp className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-black mb-4 text-white">AI-Powered Estimates</h3>
+                <p className="text-slate-400 leading-relaxed">
+                  Get accurate, instant cost predictions with our intelligent pricing calculator powered by advanced algorithms.
+                </p>
+              </Card>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              whileHover={{ y: -10 }}
+            >
+              <Card className="p-10 bg-gradient-to-br from-slate-800 to-slate-900 border-2 border-orange-500/20 hover:border-orange-500/50 shadow-xl hover:shadow-2xl hover:shadow-orange-500/20 transition-all h-full">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-500 to-rose-600 flex items-center justify-center mb-6 shadow-lg shadow-orange-500/30">
+                  <Shield className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-black mb-4 text-white">Quality Guaranteed</h3>
+                <p className="text-slate-400 leading-relaxed">
+                  Premium materials and craftsmanship backed by our comprehensive warranty and quality assurance.
+                </p>
+              </Card>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              whileHover={{ y: -10 }}
+            >
+              <Card className="p-10 bg-gradient-to-br from-slate-800 to-slate-900 border-2 border-rose-500/20 hover:border-rose-500/50 shadow-xl hover:shadow-2xl hover:shadow-rose-500/20 transition-all h-full">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-rose-500 to-pink-600 flex items-center justify-center mb-6 shadow-lg shadow-rose-500/30">
+                  <Award className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-black mb-4 text-white">Expert Designers</h3>
+                <p className="text-slate-400 leading-relaxed">
+                  Work with seasoned professionals who bring decades of experience in luxury interior design.
+                </p>
+              </Card>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 px-6 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-amber-900/10 via-transparent to-orange-900/10"></div>
+        
+        <div className="max-w-7xl mx-auto relative">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-20"
+          >
+            <h2 className="text-5xl md:text-6xl font-black text-white mb-6">
+              Select Your <span className="text-transparent bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text">Space Type</span>
+            </h2>
+            <p className="text-xl text-slate-400 max-w-2xl mx-auto">
+              Choose your home configuration and get an instant AI-powered cost estimate
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {[
+              { bhk: "1", color: "amber", desc: "Perfect for singles & couples", range: "400-600 sq ft" },
+              { bhk: "2", color: "orange", desc: "Ideal for small families", range: "700-1000 sq ft" },
+              { bhk: "3", color: "rose", desc: "Spacious family homes", range: "1100-1500 sq ft" },
+            ].map((item, index) => (
+              <motion.div
+                key={item.bhk}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                whileHover={{ scale: 1.05, y: -10 }}
+              >
+                <Link href={`/calculator/${item.bhk}bhk`}>
+                  <Card className={`p-12 text-center cursor-pointer bg-gradient-to-br from-slate-800 to-slate-900 border-2 border-${item.color}-500/30 hover:border-${item.color}-500 shadow-xl hover:shadow-2xl hover:shadow-${item.color}-500/30 transition-all group`}>
+                    <div className={`text-8xl font-black text-transparent bg-gradient-to-r from-${item.color}-400 to-${item.color}-600 bg-clip-text mb-4 group-hover:scale-110 transition-transform`}>
+                      {item.bhk}
+                    </div>
+                    <div className="text-5xl font-black text-white mb-4">BHK</div>
+                    <p className={`text-${item.color}-400 text-lg font-bold mb-2`}>{item.desc}</p>
+                    <p className="text-slate-500 text-sm">{item.range}</p>
+                  </Card>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 px-6 bg-gradient-to-br from-amber-900/10 to-orange-900/10">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-5xl md:text-6xl font-black text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-slate-400 mb-12">
+              Contact us today for a free consultation and transform your space
             </p>
             <Button
               size="lg"
-              className="bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 hover:from-cyan-400 hover:via-blue-500 hover:to-purple-500 text-white font-black px-10 py-8 text-xl rounded-2xl shadow-2xl shadow-cyan-500/50 hover:shadow-cyan-400/70 transition-all hover:scale-110"
+              className="bg-gradient-to-r from-amber-500 via-orange-600 to-rose-600 hover:from-amber-400 hover:via-orange-500 hover:to-rose-500 text-white font-black px-16 py-8 text-xl rounded-2xl shadow-2xl shadow-amber-500/30 hover:shadow-amber-400/50 transition-all"
               asChild
             >
-              <Link href="#bhk-selection">
-                <Sparkles className="w-6 h-6 mr-3 animate-pulse" />
-                Get Instant Estimate
+              <Link href="/contact">
+                Contact Us Now
+                <ArrowRight className="w-6 h-6 ml-3" />
               </Link>
             </Button>
           </motion.div>
         </div>
       </section>
 
-      <section id="services" className="py-20 px-6 bg-gradient-to-br from-slate-900/50 to-indigo-900/50 backdrop-blur-xl">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-5xl md:text-6xl font-black text-transparent bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text mb-6">
-              Why Choose Us
-            </h2>
-            <p className="text-xl text-cyan-200 max-w-2xl mx-auto font-semibold">
-              Premium quality interiors with transparent pricing and AI-powered estimations
-            </p>
-          </motion.div>
-
-          <motion.div
-            variants={container}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            className="grid md:grid-cols-3 gap-8"
-          >
-            <motion.div variants={item} whileHover={{ scale: 1.05, y: -10 }}>
-              <Card className="p-8 bg-gradient-to-br from-cyan-900/70 via-blue-900/50 to-indigo-900/70 border-2 border-cyan-500/30 hover:border-cyan-400/60 shadow-xl shadow-cyan-500/20 hover:shadow-2xl hover:shadow-cyan-400/40 transition-all backdrop-blur-xl">
-                <Sofa className="w-14 h-14 text-cyan-400 mb-5" />
-                <h3 className="text-2xl font-black mb-4 text-cyan-100">Custom Design</h3>
-                <p className="text-cyan-200 leading-relaxed font-medium">
-                  Personalized interior solutions crafted to match your unique style and requirements
-                </p>
-              </Card>
-            </motion.div>
-
-            <motion.div variants={item} whileHover={{ scale: 1.05, y: -10 }}>
-              <Card className="p-8 bg-gradient-to-br from-purple-900/70 via-fuchsia-900/50 to-pink-900/70 border-2 border-purple-500/30 hover:border-purple-400/60 shadow-xl shadow-purple-500/20 hover:shadow-2xl hover:shadow-purple-400/40 transition-all backdrop-blur-xl">
-                <Sparkles className="w-14 h-14 text-purple-400 mb-5 animate-pulse" />
-                <h3 className="text-2xl font-black mb-4 text-purple-100">AI Estimation</h3>
-                <p className="text-purple-200 leading-relaxed font-medium">
-                  Get accurate cost predictions instantly with our intelligent pricing calculator
-                </p>
-              </Card>
-            </motion.div>
-
-            <motion.div variants={item} whileHover={{ scale: 1.05, y: -10 }}>
-              <Card className="p-8 bg-gradient-to-br from-pink-900/70 via-rose-900/50 to-orange-900/70 border-2 border-pink-500/30 hover:border-pink-400/60 shadow-xl shadow-pink-500/20 hover:shadow-2xl hover:shadow-pink-400/40 transition-all backdrop-blur-xl">
-                <Home className="w-14 h-14 text-pink-400 mb-5" />
-                <h3 className="text-2xl font-black mb-4 text-pink-100">Full Build</h3>
-                <p className="text-pink-200 leading-relaxed font-medium">
-                  Complete construction and interior design services from concept to completion
-                </p>
-              </Card>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
-
-      <section id="bhk-selection" className="py-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-5xl md:text-6xl font-black text-transparent bg-gradient-to-r from-fuchsia-400 to-pink-400 bg-clip-text mb-6">
-              Select Your Space
-            </h2>
-            <p className="text-xl text-fuchsia-200 max-w-2xl mx-auto font-semibold">
-              Choose your home configuration and get an instant AI-powered cost estimate
-            </p>
-          </motion.div>
-
-          <motion.div
-            variants={container}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto"
-          >
-            <motion.div variants={item} whileHover={{ scale: 1.1, rotate: 2 }}>
-              <Link href="/calculator/1bhk">
-                <Card className="p-12 text-center hover:shadow-2xl transition-all cursor-pointer bg-gradient-to-br from-cyan-900/80 via-blue-900/60 to-indigo-900/80 border-2 border-cyan-500/40 hover:border-cyan-400 shadow-xl shadow-cyan-500/30 hover:shadow-cyan-400/50 backdrop-blur-xl">
-                  <div className="text-7xl font-black text-transparent bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text mb-4">
-                    1
-                  </div>
-                  <div className="text-4xl font-black text-cyan-100 mb-3">BHK</div>
-                  <p className="text-cyan-300 text-base font-semibold">Perfect for singles & couples</p>
-                </Card>
-              </Link>
-            </motion.div>
-
-            <motion.div variants={item} whileHover={{ scale: 1.1, rotate: -2 }}>
-              <Link href="/calculator/2bhk">
-                <Card className="p-12 text-center hover:shadow-2xl transition-all cursor-pointer bg-gradient-to-br from-purple-900/80 via-fuchsia-900/60 to-pink-900/80 border-2 border-purple-500/40 hover:border-purple-400 shadow-xl shadow-purple-500/30 hover:shadow-purple-400/50 backdrop-blur-xl">
-                  <div className="text-7xl font-black text-transparent bg-gradient-to-r from-purple-400 to-fuchsia-500 bg-clip-text mb-4">
-                    2
-                  </div>
-                  <div className="text-4xl font-black text-purple-100 mb-3">BHK</div>
-                  <p className="text-purple-300 text-base font-semibold">Ideal for small families</p>
-                </Card>
-              </Link>
-            </motion.div>
-
-            <motion.div variants={item} whileHover={{ scale: 1.1, rotate: 2 }}>
-              <Link href="/calculator/3bhk">
-                <Card className="p-12 text-center hover:shadow-2xl transition-all cursor-pointer bg-gradient-to-br from-pink-900/80 via-rose-900/60 to-orange-900/80 border-2 border-pink-500/40 hover:border-pink-400 shadow-xl shadow-pink-500/30 hover:shadow-pink-400/50 backdrop-blur-xl">
-                  <div className="text-7xl font-black text-transparent bg-gradient-to-r from-pink-400 to-orange-500 bg-clip-text mb-4">
-                    3
-                  </div>
-                  <div className="text-4xl font-black text-pink-100 mb-3">BHK</div>
-                  <p className="text-pink-300 text-base font-semibold">Spacious family homes</p>
-                </Card>
-              </Link>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
-
-      <section
-        id="contact"
-        className="py-20 px-6 bg-gradient-to-br from-violet-950 via-fuchsia-950 to-purple-950 text-white border-t-2 border-fuchsia-500/30"
-      >
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-5xl md:text-6xl font-black text-transparent bg-gradient-to-r from-cyan-400 to-pink-400 bg-clip-text mb-6">
-              Get In Touch
-            </h2>
-            <p className="text-2xl text-fuchsia-200 font-semibold">Ready to transform your space? Contact us today</p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <motion.div whileHover={{ scale: 1.05, y: -5 }}>
-              <Card className="p-8 bg-gradient-to-br from-cyan-900/70 via-blue-900/50 to-indigo-900/70 backdrop-blur-xl border-2 border-cyan-500/40 hover:border-cyan-400 shadow-xl shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-400/40 transition-all">
-                <MapPin className="w-12 h-12 text-cyan-400 mb-5" />
-                <h3 className="text-2xl font-black mb-4 text-cyan-100">Visit Us</h3>
-                <p className="text-cyan-200 leading-relaxed font-medium">
-                  Boral Main Road, Mullick Para
-                  <br />
-                  Ramchandrapur, Narendrapur
-                  <br />
-                  Kolkata, Rajpur Sonarpur
-                  <br />
-                  West Bengal 700103
-                </p>
-              </Card>
-            </motion.div>
-
-            <motion.div whileHover={{ scale: 1.05, y: -5 }}>
-              <Card className="p-8 bg-gradient-to-br from-fuchsia-900/70 via-pink-900/50 to-purple-900/70 backdrop-blur-xl border-2 border-fuchsia-500/40 hover:border-fuchsia-400 shadow-xl shadow-fuchsia-500/30 hover:shadow-2xl hover:shadow-fuchsia-400/40 transition-all">
-                <Phone className="w-12 h-12 text-fuchsia-400 mb-5" />
-                <h3 className="text-2xl font-black mb-4 text-fuchsia-100">Call Us</h3>
-                <a
-                  href="tel:09007307197"
-                  className="text-3xl font-black text-transparent bg-gradient-to-r from-yellow-400 to-pink-500 bg-clip-text hover:from-yellow-300 hover:to-pink-400 transition-all block"
-                >
-                  090073 07197
-                </a>
-                <p className="text-fuchsia-200 mt-5 font-medium">
-                  Available Monday to Saturday
-                  <br />
-                  9:00 AM - 7:00 PM
-                </p>
-              </Card>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      <footer className="bg-black text-gray-500 py-10 px-6 border-t border-fuchsia-900/30">
-        <div className="max-w-7xl mx-auto text-center">
-          <p className="font-semibold">© 2025 My Interio World. All rights reserved.</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }
