@@ -1,12 +1,14 @@
 "use client"
 
-import { Home } from "lucide-react"
+import { Home, Menu, X } from "lucide-react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { motion } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
+import { useState } from "react"
 
 export function Navigation() {
   const pathname = usePathname()
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   const links = [
     { href: "/", label: "Home" },
@@ -29,7 +31,8 @@ export function Navigation() {
             My Interio World
           </span>
         </Link>
-        <div className="flex items-center gap-1">
+
+        <div className="hidden md:flex items-center gap-1">
           {links.map((link) => (
             <Link
               key={link.href}
@@ -44,7 +47,42 @@ export function Navigation() {
             </Link>
           ))}
         </div>
+
+        <button
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          className="md:hidden p-2 rounded-xl text-amber-400 hover:bg-slate-800/50 transition-colors"
+        >
+          {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        </button>
       </div>
+
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            className="md:hidden bg-slate-950/95 backdrop-blur-2xl border-b border-amber-500/20 overflow-hidden"
+          >
+            <div className="px-6 py-4 flex flex-col gap-2">
+              {links.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`px-5 py-3 rounded-xl font-bold transition-all ${
+                    pathname === link.href
+                      ? "bg-gradient-to-r from-amber-500 to-orange-600 text-white shadow-lg shadow-amber-500/50"
+                      : "text-slate-300 hover:text-white hover:bg-slate-800/50"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   )
 }
