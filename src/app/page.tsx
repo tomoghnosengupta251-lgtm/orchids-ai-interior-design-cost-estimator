@@ -70,61 +70,61 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="services" className="py-20 px-6 bg-white/50">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Why Choose Us
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Premium quality interiors with transparent pricing and AI-powered estimations
-            </p>
-          </motion.div>
-
-          <motion.div
-            variants={container}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            className="grid md:grid-cols-3 gap-8"
-          >
-            <motion.div variants={item}>
-              <Card className="p-8 bg-gradient-to-br from-amber-50 to-orange-50 border-amber-200 hover:shadow-xl transition-shadow">
-                <Sofa className="w-12 h-12 text-amber-600 mb-4" />
-                <h3 className="text-2xl font-semibold mb-3 text-gray-900">Custom Design</h3>
-                <p className="text-gray-700 leading-relaxed">
-                  Personalized interior solutions crafted to match your unique style and requirements
-                </p>
-              </Card>
+        <section id="services" className="py-20 px-6 bg-gradient-to-br from-slate-900/50 to-indigo-900/50 backdrop-blur-xl">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-5xl md:text-6xl font-black text-transparent bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text mb-6">
+                Why Choose Us
+              </h2>
+              <p className="text-xl text-cyan-200 max-w-2xl mx-auto font-semibold">
+                Premium quality interiors with transparent pricing and AI-powered estimations
+              </p>
             </motion.div>
 
-            <motion.div variants={item}>
-              <Card className="p-8 bg-gradient-to-br from-orange-50 to-rose-50 border-orange-200 hover:shadow-xl transition-shadow">
-                <Sparkles className="w-12 h-12 text-orange-600 mb-4" />
-                <h3 className="text-2xl font-semibold mb-3 text-gray-900">AI Estimation</h3>
-                <p className="text-gray-700 leading-relaxed">
-                  Get accurate cost predictions instantly with our intelligent pricing calculator
-                </p>
-              </Card>
-            </motion.div>
+            <motion.div
+              variants={container}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              className="grid md:grid-cols-3 gap-8"
+            >
+              <motion.div variants={item} whileHover={{ scale: 1.05, y: -10 }}>
+                <Card className="p-8 bg-gradient-to-br from-cyan-900/70 via-blue-900/50 to-indigo-900/70 border-2 border-cyan-500/30 hover:border-cyan-400/60 shadow-xl shadow-cyan-500/20 hover:shadow-2xl hover:shadow-cyan-400/40 transition-all backdrop-blur-xl">
+                  <Sofa className="w-14 h-14 text-cyan-400 mb-5" />
+                  <h3 className="text-2xl font-black mb-4 text-cyan-100">Custom Design</h3>
+                  <p className="text-cyan-200 leading-relaxed font-medium">
+                    Personalized interior solutions crafted to match your unique style and requirements
+                  </p>
+                </Card>
+              </motion.div>
 
-            <motion.div variants={item}>
-              <Card className="p-8 bg-gradient-to-br from-rose-50 to-pink-50 border-rose-200 hover:shadow-xl transition-shadow">
-                <Home className="w-12 h-12 text-rose-600 mb-4" />
-                <h3 className="text-2xl font-semibold mb-3 text-gray-900">Full Build</h3>
-                <p className="text-gray-700 leading-relaxed">
-                  Complete construction and interior design services from concept to completion
-                </p>
-              </Card>
+              <motion.div variants={item} whileHover={{ scale: 1.05, y: -10 }}>
+                <Card className="p-8 bg-gradient-to-br from-purple-900/70 via-fuchsia-900/50 to-pink-900/70 border-2 border-purple-500/30 hover:border-purple-400/60 shadow-xl shadow-purple-500/20 hover:shadow-2xl hover:shadow-purple-400/40 transition-all backdrop-blur-xl">
+                  <Sparkles className="w-14 h-14 text-purple-400 mb-5 animate-pulse" />
+                  <h3 className="text-2xl font-black mb-4 text-purple-100">AI Estimation</h3>
+                  <p className="text-purple-200 leading-relaxed font-medium">
+                    Get accurate cost predictions instantly with our intelligent pricing calculator
+                  </p>
+                </Card>
+              </motion.div>
+
+              <motion.div variants={item} whileHover={{ scale: 1.05, y: -10 }}>
+                <Card className="p-8 bg-gradient-to-br from-pink-900/70 via-rose-900/50 to-orange-900/70 border-2 border-pink-500/30 hover:border-pink-400/60 shadow-xl shadow-pink-500/20 hover:shadow-2xl hover:shadow-pink-400/40 transition-all backdrop-blur-xl">
+                  <Home className="w-14 h-14 text-pink-400 mb-5" />
+                  <h3 className="text-2xl font-black mb-4 text-pink-100">Full Build</h3>
+                  <p className="text-pink-200 leading-relaxed font-medium">
+                    Complete construction and interior design services from concept to completion
+                  </p>
+                </Card>
+              </motion.div>
             </motion.div>
-          </motion.div>
-        </div>
-      </section>
+          </div>
+        </section>
 
       <section id="bhk-selection" className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
