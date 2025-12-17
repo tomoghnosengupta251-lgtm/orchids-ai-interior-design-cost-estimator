@@ -59,14 +59,14 @@ export default function CalculatorPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-900 to-fuchsia-900">
-      <nav className="fixed top-0 w-full bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 backdrop-blur-xl z-50 border-b border-cyan-400/20">
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+      <nav className="fixed top-0 w-full bg-slate-950/80 backdrop-blur-2xl z-50 border-b border-amber-500/20">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 text-cyan-300 hover:text-cyan-200 transition-all hover:scale-105 group">
+          <Link href="/" className="flex items-center gap-2 text-amber-400 hover:text-amber-300 transition-all hover:scale-105 group">
             <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
             <span className="font-bold">Back to Home</span>
           </Link>
-          <Badge className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-5 py-2.5 text-sm font-bold shadow-lg shadow-cyan-500/50">
+          <Badge className="bg-gradient-to-r from-amber-500 to-orange-600 text-white px-5 py-2.5 text-sm font-bold shadow-lg shadow-amber-500/50">
             {config.type.toUpperCase()} - {config.sqftRange}
           </Badge>
         </div>
