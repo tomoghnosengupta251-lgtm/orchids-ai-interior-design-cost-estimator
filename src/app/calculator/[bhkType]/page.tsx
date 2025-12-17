@@ -167,53 +167,53 @@ export default function CalculatorPage() {
 
             <div className="lg:col-span-1">
               <div className="sticky top-24 space-y-6">
-                <Card className="p-6 bg-gradient-to-br from-fuchsia-900/80 via-pink-900/60 to-purple-900/80 border-2 border-fuchsia-500/40 shadow-2xl shadow-fuchsia-500/30 backdrop-blur-xl">
-                  <h3 className="text-2xl font-black text-transparent bg-gradient-to-r from-fuchsia-400 to-pink-400 bg-clip-text mb-6">Cost Breakdown</h3>
-                  
-                  <div className="space-y-3 mb-6">
-                    <div className="flex justify-between text-fuchsia-100 p-3 rounded-lg bg-fuchsia-950/40">
-                      <span className="font-bold">Base Package</span>
-                      <span className="font-black">{formatCurrency(config.basePrice)}</span>
-                    </div>
-                    {selectedOptions.map(optionId => {
-                      const option = config.options.find(opt => opt.id === optionId)
-                      if (!option) return null
-                      return (
-                        <div key={optionId} className="flex justify-between text-pink-200 text-sm p-2 rounded-lg bg-pink-950/30">
-                          <span>{option.name}</span>
-                          <span className="font-bold text-yellow-400">+{formatCurrency(option.baseCost)}</span>
-                        </div>
-                      )
-                    })}
-                    {selectedOptions.length > 0 && (
-                      <div className="flex justify-between text-purple-200 text-sm p-2 rounded-lg bg-purple-950/30">
-                        <span>AI Design Optimization</span>
-                        <span className="font-bold text-cyan-400">+{(selectedOptions.length * 2)}%</span>
+                  <Card className="p-6 bg-gradient-to-br from-slate-800 to-slate-900 border-2 border-amber-500/40 shadow-2xl shadow-amber-500/30 backdrop-blur-xl">
+                    <h3 className="text-2xl font-black text-transparent bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text mb-6">Cost Breakdown</h3>
+                    
+                    <div className="space-y-3 mb-6">
+                      <div className="flex justify-between text-white p-3 rounded-lg bg-slate-900/50">
+                        <span className="font-bold">Base Package</span>
+                        <span className="font-black">{formatCurrency(config.basePrice)}</span>
                       </div>
-                    )}
-                  </div>
-
-                  <div className="border-t-2 border-fuchsia-500/50 pt-6 mb-6">
-                    <div className="flex justify-between items-center">
-                      <span className="text-lg font-black text-fuchsia-100">Estimated Total</span>
-                      <div className="text-right">
-                        <div className="text-4xl font-black text-transparent bg-gradient-to-r from-yellow-400 via-pink-500 to-cyan-400 bg-clip-text flex items-center animate-pulse">
-                          <IndianRupee className="w-8 h-8" />
-                          {estimatedCost.toLocaleString("en-IN")}
+                      {selectedOptions.map(optionId => {
+                        const option = config.options.find(opt => opt.id === optionId)
+                        if (!option) return null
+                        return (
+                          <div key={optionId} className="flex justify-between text-slate-200 text-sm p-2 rounded-lg bg-slate-900/30">
+                            <span>{option.name}</span>
+                            <span className="font-bold text-amber-400">+{formatCurrency(option.baseCost)}</span>
+                          </div>
+                        )
+                      })}
+                      {selectedOptions.length > 0 && (
+                        <div className="flex justify-between text-slate-200 text-sm p-2 rounded-lg bg-slate-900/30">
+                          <span>AI Design Optimization</span>
+                          <span className="font-bold text-green-400">+{(selectedOptions.length * 2)}%</span>
                         </div>
-                        <p className="text-xs text-fuchsia-300 mt-2 font-semibold">AI-Powered Estimate</p>
+                      )}
+                    </div>
+
+                    <div className="border-t-2 border-amber-500/50 pt-6 mb-6">
+                      <div className="flex justify-between items-center">
+                        <span className="text-lg font-black text-white">Estimated Total</span>
+                        <div className="text-right">
+                          <div className="text-4xl font-black text-transparent bg-gradient-to-r from-amber-400 via-orange-500 to-rose-600 bg-clip-text flex items-center animate-pulse">
+                            <IndianRupee className="w-8 h-8" />
+                            {estimatedCost.toLocaleString("en-IN")}
+                          </div>
+                          <p className="text-xs text-slate-400 mt-2 font-semibold">AI-Powered Estimate</p>
+                        </div>
                       </div>
                     </div>
-                  </div>
 
-                  <Button
-                    onClick={handleGetEstimate}
-                    className="w-full bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 hover:from-cyan-400 hover:via-blue-500 hover:to-purple-500 text-white font-black py-7 text-lg rounded-xl shadow-2xl shadow-cyan-500/50 hover:shadow-cyan-400/70 transition-all hover:scale-105"
-                  >
-                    <Sparkles className="w-6 h-6 mr-2 animate-pulse" />
-                    Get Final Estimate
-                  </Button>
-                </Card>
+                    <Button
+                      onClick={handleGetEstimate}
+                      className="w-full bg-gradient-to-r from-amber-500 via-orange-600 to-rose-600 hover:from-amber-400 hover:via-orange-500 hover:to-rose-500 text-white font-black py-7 text-lg rounded-xl shadow-2xl shadow-amber-500/50 hover:shadow-amber-400/70 transition-all hover:scale-105"
+                    >
+                      <Sparkles className="w-6 h-6 mr-2 animate-pulse" />
+                      Get Final Estimate
+                    </Button>
+                  </Card>
 
                 {showResult && (
                   <motion.div
