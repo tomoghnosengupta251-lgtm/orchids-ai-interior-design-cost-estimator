@@ -4,11 +4,16 @@ import { Home, Menu, X } from "lucide-react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { motion, AnimatePresence } from "framer-motion"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 export function Navigation() {
   const pathname = usePathname()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
+  useEffect(() => {
+    // Ensure the browser tab shows the correct site title
+    document.title = "My Interio World";
+  }, [])
 
   const links = [
     { href: "/", label: "Home" },

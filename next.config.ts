@@ -17,7 +17,9 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  outputFileTracingRoot: path.resolve(__dirname, '../../'),
+  // Use the repository root for output file tracing. Removing the previous '../../' override
+  // which could create incorrect absolute paths like '/vercel/path0/vercel/path0/.next/...'
+  outputFileTracingRoot: path.resolve(__dirname),
   typescript: {
     ignoreBuildErrors: true,
   },
