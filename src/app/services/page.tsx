@@ -75,66 +75,66 @@ export default function ServicesPage() {
 
           <section className="pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20 px-4 sm:px-6">
             <div className="max-w-7xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                className="text-center max-w-4xl mx-auto mb-12 sm:mb-16 md:mb-20"
-              >
                 <motion.div
-                  initial={{ scale: 0.9, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  transition={{ delay: 0.2, duration: 0.6 }}
-                  className="inline-block mb-4 sm:mb-6 px-4 sm:px-6 py-2 rounded-full bg-foreground/5 border border-foreground/10"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8 }}
+                  className="text-center max-w-4xl mx-auto mb-12 sm:mb-16 md:mb-20"
                 >
-                  <span className="text-foreground font-bold text-sm sm:text-base">Our Services</span>
+                  <motion.div
+                    initial={{ scale: 0.9, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    transition={{ delay: 0.2, duration: 0.6 }}
+                    className="inline-block mb-4 sm:mb-6 px-4 sm:px-6 py-2 rounded-full bg-secondary/10 border border-secondary/20"
+                  >
+                    <span className="text-secondary font-bold text-sm sm:text-base">Our Services</span>
+                  </motion.div>
+
+                  <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-4 sm:mb-6 md:mb-8 leading-tight">
+                    <span className="text-secondary">
+                      Premium Design
+                    </span>
+                    <br />
+                    <span className="text-foreground">Services</span>
+                  </h1>
+
+                  <p className="text-base sm:text-lg md:text-xl text-foreground/70 leading-relaxed px-2">
+                    From concept to completion, we provide comprehensive interior design and construction services 
+                    tailored to transform your vision into reality.
+                  </p>
                 </motion.div>
 
-                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-4 sm:mb-6 md:mb-8 leading-tight">
-                  <span className="text-foreground/40">
-                    Premium Design
-                  </span>
-                  <br />
-                  <span className="text-foreground">Services</span>
-                </h1>
-
-                <p className="text-base sm:text-lg md:text-xl text-foreground/70 leading-relaxed px-2">
-                  From concept to completion, we provide comprehensive interior design and construction services 
-                  tailored to transform your vision into reality.
-                </p>
-              </motion.div>
-
-              <motion.div
-                variants={container}
-                initial="hidden"
-                animate="show"
-                className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8"
-              >
-                {services.map((service, index) => {
-                  const Icon = service.icon
-                  return (
-                    <motion.div key={index} variants={item} whileHover={{ y: -10 }}>
-                      <Card className="p-5 sm:p-6 md:p-8 bg-background border-2 border-foreground/10 hover:border-foreground/30 shadow-xl hover:shadow-2xl hover:shadow-black/5 transition-all h-full flex flex-col">
-                        <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl sm:rounded-2xl bg-foreground flex items-center justify-center mb-4 sm:mb-6 shadow-lg shadow-black/10">
-                          <Icon className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-background" />
-                        </div>
-                        
-                        <h3 className="text-lg sm:text-xl md:text-2xl font-black mb-2 sm:mb-4 text-foreground">{service.title}</h3>
-                        <p className="text-foreground/60 leading-relaxed mb-4 sm:mb-6 text-sm sm:text-base">{service.description}</p>
-                        
-                        <div className="mt-auto space-y-1.5 sm:space-y-2">
-                          {service.features.map((feature, idx) => (
-                            <div key={idx} className="flex items-center gap-2">
-                              <Check className="w-4 h-4 sm:w-5 sm:h-5 text-foreground/80 flex-shrink-0" />
-                              <span className="text-foreground/70 text-xs sm:text-sm">{feature}</span>
-                            </div>
-                          ))}
-                        </div>
-                      </Card>
-                    </motion.div>
-                  )
-                })}
-              </motion.div>
+                <motion.div
+                  variants={container}
+                  initial="hidden"
+                  animate="show"
+                  className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8"
+                >
+                  {services.map((service, index) => {
+                    const Icon = service.icon
+                    return (
+                      <motion.div key={index} variants={item} whileHover={{ y: -10 }}>
+                        <Card className="p-5 sm:p-6 md:p-8 bg-background border-2 border-secondary/20 hover:border-secondary shadow-xl hover:shadow-2xl hover:shadow-black/5 transition-all h-full flex flex-col">
+                          <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl sm:rounded-2xl bg-secondary flex items-center justify-center mb-4 sm:mb-6 shadow-lg shadow-black/10">
+                            <Icon className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-background" />
+                          </div>
+                          
+                          <h3 className="text-lg sm:text-xl md:text-2xl font-black mb-2 sm:mb-4 text-foreground">{service.title}</h3>
+                          <p className="text-foreground/60 leading-relaxed mb-4 sm:mb-6 text-sm sm:text-base">{service.description}</p>
+                          
+                          <div className="mt-auto space-y-1.5 sm:space-y-2">
+                            {service.features.map((feature, idx) => (
+                              <div key={idx} className="flex items-center gap-2">
+                                <Check className="w-4 h-4 sm:w-5 sm:h-5 text-secondary flex-shrink-0" />
+                                <span className="text-foreground/70 text-xs sm:text-sm">{feature}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </Card>
+                      </motion.div>
+                    )
+                  })}
+                </motion.div>
             </div>
           </section>
 
