@@ -27,13 +27,13 @@ export default function HomePage() {
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.6 }}
-              className="inline-block mb-4 sm:mb-6 px-4 sm:px-6 py-2 rounded-full bg-foreground/5 border border-foreground/10">
+              className="inline-block mb-4 sm:mb-6 px-4 sm:px-6 py-2 rounded-full bg-secondary/10 border border-secondary/20">
 
-              <span className="text-foreground font-bold text-sm sm:text-base">✨ Premispanum Interior Design</span>
+              <span className="text-secondary font-bold text-sm sm:text-base">✨ Premispanum Interior Design</span>
             </motion.div>
 
             <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-black mb-4 sm:mb-6 md:mb-8 leading-tight">
-              <span className="block text-foreground/40">
+              <span className="block text-secondary">
                 Design Your
               </span>
               <span className="block text-foreground mt-2 sm:mt-4">Dream Space</span>
@@ -59,7 +59,7 @@ export default function HomePage() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-2 border-foreground/20 hover:border-foreground/40 bg-transparent text-foreground font-black px-6 sm:px-8 md:px-12 py-5 sm:py-6 md:py-8 text-base sm:text-lg md:text-xl rounded-2xl backdrop-blur-xl transition-all w-full sm:w-auto"
+                className="border-2 border-secondary/30 hover:border-secondary bg-transparent text-secondary font-black px-6 sm:px-8 md:px-12 py-5 sm:py-6 md:py-8 text-base sm:text-lg md:text-xl rounded-2xl backdrop-blur-xl transition-all w-full sm:w-auto"
                 asChild>
 
                 <Link href="/calculator/1bhk">
@@ -72,7 +72,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 bg-foreground/5">
+      <section className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 bg-secondary/5">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -81,7 +81,7 @@ export default function HomePage() {
             className="text-center mb-10 sm:mb-16 md:mb-20">
 
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-foreground mb-4 sm:mb-6">
-              Why Choose <span className="text-foreground/40">Us</span>
+              Why Choose <span className="text-secondary">Us</span>
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-foreground/60 max-w-2xl mx-auto px-2">
               Experience excellence in every detail with our premium services
@@ -96,8 +96,8 @@ export default function HomePage() {
               transition={{ delay: 0.1 }}
               whileHover={{ y: -10 }}>
 
-              <Card className="p-6 sm:p-8 md:p-10 bg-background border-2 border-foreground/10 hover:border-foreground/30 shadow-xl hover:shadow-2xl hover:shadow-black/5 transition-all h-full">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl sm:rounded-2xl bg-foreground flex items-center justify-center mb-4 sm:mb-6 shadow-lg shadow-black/10">
+              <Card className="p-6 sm:p-8 md:p-10 bg-background border-2 border-secondary/20 hover:border-secondary shadow-xl hover:shadow-2xl hover:shadow-black/5 transition-all h-full">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl sm:rounded-2xl bg-secondary flex items-center justify-center mb-4 sm:mb-6 shadow-lg shadow-black/10">
                   <TrendingUp className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-background" />
                 </div>
                 <h3 className="text-lg sm:text-xl md:text-2xl font-black mb-2 sm:mb-4 text-foreground">AI-Powered Estimates</h3>
@@ -114,8 +114,8 @@ export default function HomePage() {
               transition={{ delay: 0.2 }}
               whileHover={{ y: -10 }}>
 
-              <Card className="p-6 sm:p-8 md:p-10 bg-background border-2 border-foreground/10 hover:border-foreground/30 shadow-xl hover:shadow-2xl hover:shadow-black/5 transition-all h-full">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl sm:rounded-2xl bg-foreground flex items-center justify-center mb-4 sm:mb-6 shadow-lg shadow-black/10">
+              <Card className="p-6 sm:p-8 md:p-10 bg-background border-2 border-secondary/20 hover:border-secondary shadow-xl hover:shadow-2xl hover:shadow-black/5 transition-all h-full">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl sm:rounded-2xl bg-secondary flex items-center justify-center mb-4 sm:mb-6 shadow-lg shadow-black/10">
                   <Shield className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-background" />
                 </div>
                 <h3 className="text-lg sm:text-xl md:text-2xl font-black mb-2 sm:mb-4 text-foreground">Quality Guaranteed</h3>
@@ -133,8 +133,8 @@ export default function HomePage() {
               whileHover={{ y: -10 }}
               className="sm:col-span-2 lg:col-span-1">
 
-              <Card className="p-6 sm:p-8 md:p-10 bg-background border-2 border-foreground/10 hover:border-foreground/30 shadow-xl hover:shadow-2xl hover:shadow-black/5 transition-all h-full">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl sm:rounded-2xl bg-foreground flex items-center justify-center mb-4 sm:mb-6 shadow-lg shadow-black/10">
+              <Card className="p-6 sm:p-8 md:p-10 bg-background border-2 border-secondary/20 hover:border-secondary shadow-xl hover:shadow-2xl hover:shadow-black/5 transition-all h-full">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl sm:rounded-2xl bg-secondary flex items-center justify-center mb-4 sm:mb-6 shadow-lg shadow-black/10">
                   <Award className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-background" />
                 </div>
                 <h3 className="text-lg sm:text-xl md:text-2xl font-black mb-2 sm:mb-4 text-foreground">Expert Designers</h3>
@@ -148,7 +148,7 @@ export default function HomePage() {
       </section>
 
       <section className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 relative overflow-hidden">
-        <div className="absolute inset-0 bg-foreground/5"></div>
+        <div className="absolute inset-0 bg-secondary/5"></div>
         
         <div className="max-w-7xl mx-auto relative">
           <motion.div
@@ -158,7 +158,7 @@ export default function HomePage() {
             className="text-center mb-10 sm:mb-16 md:mb-20">
 
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-foreground mb-4 sm:mb-6">
-              Select Your <span className="text-foreground/40">Space Type</span>
+              Select Your <span className="text-secondary">Space Type</span>
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-foreground/60 max-w-2xl mx-auto px-2">
               Choose your home configuration and get an instant AI-powered cost estimate
@@ -173,8 +173,8 @@ export default function HomePage() {
               transition={{ delay: 0.1 }}
               whileHover={{ scale: 1.05, y: -10 }}>
               <Link href="/calculator/1bhk">
-                <Card className="p-8 sm:p-10 md:p-12 text-center cursor-pointer bg-background border-2 border-foreground/10 hover:border-foreground shadow-xl hover:shadow-2xl hover:shadow-black/5 transition-all group">
-                  <div className="text-6xl sm:text-7xl md:text-8xl font-black text-foreground mb-2 sm:mb-4 group-hover:scale-110 transition-transform">
+                <Card className="p-8 sm:p-10 md:p-12 text-center cursor-pointer bg-background border-2 border-secondary/10 hover:border-secondary shadow-xl hover:shadow-2xl hover:shadow-black/5 transition-all group">
+                  <div className="text-6xl sm:text-7xl md:text-8xl font-black text-secondary mb-2 sm:mb-4 group-hover:scale-110 transition-transform">
                     1
                   </div>
                   <div className="text-3xl sm:text-4xl md:text-5xl font-black text-foreground mb-2 sm:mb-4">BHK</div>
@@ -191,8 +191,8 @@ export default function HomePage() {
               transition={{ delay: 0.2 }}
               whileHover={{ scale: 1.05, y: -10 }}>
               <Link href="/calculator/2bhk">
-                <Card className="p-8 sm:p-10 md:p-12 text-center cursor-pointer bg-background border-2 border-foreground/10 hover:border-foreground shadow-xl hover:shadow-2xl hover:shadow-black/5 transition-all group">
-                  <div className="text-6xl sm:text-7xl md:text-8xl font-black text-foreground mb-2 sm:mb-4 group-hover:scale-110 transition-transform">
+                <Card className="p-8 sm:p-10 md:p-12 text-center cursor-pointer bg-background border-2 border-secondary/10 hover:border-secondary shadow-xl hover:shadow-2xl hover:shadow-black/5 transition-all group">
+                  <div className="text-6xl sm:text-7xl md:text-8xl font-black text-secondary mb-2 sm:mb-4 group-hover:scale-110 transition-transform">
                     2
                   </div>
                   <div className="text-3xl sm:text-4xl md:text-5xl font-black text-foreground mb-2 sm:mb-4">BHK</div>
@@ -210,8 +210,8 @@ export default function HomePage() {
               whileHover={{ scale: 1.05, y: -10 }}
               className="sm:col-span-2 lg:col-span-1">
               <Link href="/calculator/3bhk">
-                <Card className="p-8 sm:p-10 md:p-12 text-center cursor-pointer bg-background border-2 border-foreground/10 hover:border-foreground shadow-xl hover:shadow-2xl hover:shadow-black/5 transition-all group">
-                  <div className="text-6xl sm:text-7xl md:text-8xl font-black text-foreground mb-2 sm:mb-4 group-hover:scale-110 transition-transform">
+                <Card className="p-8 sm:p-10 md:p-12 text-center cursor-pointer bg-background border-2 border-secondary/10 hover:border-secondary shadow-xl hover:shadow-2xl hover:shadow-black/5 transition-all group">
+                  <div className="text-6xl sm:text-7xl md:text-8xl font-black text-secondary mb-2 sm:mb-4 group-hover:scale-110 transition-transform">
                     3
                   </div>
                   <div className="text-3xl sm:text-4xl md:text-5xl font-black text-foreground mb-2 sm:mb-4">BHK</div>
