@@ -18,16 +18,16 @@ export function Navigation() {
   ]
 
   return (
-      <nav className="fixed top-0 w-full bg-slate-950/80 backdrop-blur-2xl z-50 border-b border-amber-500/20">
+      <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-2xl z-50 border-b border-foreground/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 md:py-5 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 sm:gap-3 group">
             <motion.div
               whileHover={{ rotate: 360, scale: 1.2 }}
               transition={{ duration: 0.6 }}
             >
-              <Home className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-amber-400 group-hover:text-amber-300" />
+              <Home className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-foreground group-hover:opacity-80" />
             </motion.div>
-            <span className="font-black text-lg sm:text-xl md:text-2xl text-transparent bg-gradient-to-r from-amber-400 via-orange-500 to-rose-500 bg-clip-text">
+            <span className="font-black text-lg sm:text-xl md:text-2xl text-foreground">
               My Interio World
             </span>
           </Link>
@@ -39,8 +39,8 @@ export function Navigation() {
                 href={link.href}
                 className={`px-4 lg:px-5 py-2 lg:py-2.5 rounded-xl font-bold transition-all text-sm lg:text-base ${
                   pathname === link.href
-                    ? "bg-gradient-to-r from-amber-500 to-orange-600 text-white shadow-lg shadow-amber-500/50"
-                    : "text-slate-300 hover:text-white hover:bg-slate-800/50"
+                    ? "bg-foreground text-background shadow-lg shadow-black/20"
+                    : "text-foreground/70 hover:text-foreground hover:bg-foreground/5"
                 }`}
               >
                 {link.label}
@@ -50,7 +50,7 @@ export function Navigation() {
 
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 rounded-xl text-amber-400 hover:bg-slate-800/50 transition-colors"
+            className="md:hidden p-2 rounded-xl text-foreground hover:bg-foreground/5 transition-colors"
             aria-label="Toggle menu"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -63,7 +63,7 @@ export function Navigation() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-slate-950/95 backdrop-blur-2xl border-b border-amber-500/20 overflow-hidden"
+            className="md:hidden bg-background/95 backdrop-blur-2xl border-b border-foreground/10 overflow-hidden"
           >
             <div className="px-6 py-4 flex flex-col gap-2">
               {links.map((link) => (
@@ -73,8 +73,8 @@ export function Navigation() {
                   onClick={() => setMobileMenuOpen(false)}
                   className={`px-5 py-3 rounded-xl font-bold transition-all ${
                     pathname === link.href
-                      ? "bg-gradient-to-r from-amber-500 to-orange-600 text-white shadow-lg shadow-amber-500/50"
-                      : "text-slate-300 hover:text-white hover:bg-slate-800/50"
+                      ? "bg-foreground text-background shadow-lg shadow-black/20"
+                      : "text-foreground/70 hover:text-foreground hover:bg-foreground/5"
                   }`}
                 >
                   {link.label}
