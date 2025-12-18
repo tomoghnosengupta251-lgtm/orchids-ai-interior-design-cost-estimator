@@ -72,23 +72,23 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-24 px-6 bg-slate-900/50">
+      <section className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 bg-slate-900/50">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-20">
+            className="text-center mb-10 sm:mb-16 md:mb-20">
 
-            <h2 className="text-5xl md:text-6xl font-black text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-4 sm:mb-6">
               Why Choose <span className="text-transparent bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text">Us</span>
             </h2>
-            <p className="text-xl text-slate-400 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-slate-400 max-w-2xl mx-auto px-2">
               Experience excellence in every detail with our premium services
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -96,12 +96,12 @@ export default function HomePage() {
               transition={{ delay: 0.1 }}
               whileHover={{ y: -10 }}>
 
-              <Card className="p-10 bg-gradient-to-br from-slate-800 to-slate-900 border-2 border-amber-500/20 hover:border-amber-500/50 shadow-xl hover:shadow-2xl hover:shadow-amber-500/20 transition-all h-full">
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center mb-6 shadow-lg shadow-amber-500/30">
-                  <TrendingUp className="w-8 h-8 text-white" />
+              <Card className="p-6 sm:p-8 md:p-10 bg-gradient-to-br from-slate-800 to-slate-900 border-2 border-amber-500/20 hover:border-amber-500/50 shadow-xl hover:shadow-2xl hover:shadow-amber-500/20 transition-all h-full">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl sm:rounded-2xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center mb-4 sm:mb-6 shadow-lg shadow-amber-500/30">
+                  <TrendingUp className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-black mb-4 text-white">AI-Powered Estimates</h3>
-                <p className="text-slate-400 leading-relaxed">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-black mb-2 sm:mb-4 text-white">AI-Powered Estimates</h3>
+                <p className="text-sm sm:text-base text-slate-400 leading-relaxed">
                   Get accurate, instant cost predictions with our intelligent pricing calculator powered by advanced algorithms.
                 </p>
               </Card>
@@ -114,12 +114,12 @@ export default function HomePage() {
               transition={{ delay: 0.2 }}
               whileHover={{ y: -10 }}>
 
-              <Card className="p-10 bg-gradient-to-br from-slate-800 to-slate-900 border-2 border-orange-500/20 hover:border-orange-500/50 shadow-xl hover:shadow-2xl hover:shadow-orange-500/20 transition-all h-full">
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-500 to-rose-600 flex items-center justify-center mb-6 shadow-lg shadow-orange-500/30">
-                  <Shield className="w-8 h-8 text-white" />
+              <Card className="p-6 sm:p-8 md:p-10 bg-gradient-to-br from-slate-800 to-slate-900 border-2 border-orange-500/20 hover:border-orange-500/50 shadow-xl hover:shadow-2xl hover:shadow-orange-500/20 transition-all h-full">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl sm:rounded-2xl bg-gradient-to-br from-orange-500 to-rose-600 flex items-center justify-center mb-4 sm:mb-6 shadow-lg shadow-orange-500/30">
+                  <Shield className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-black mb-4 text-white">Quality Guaranteed</h3>
-                <p className="text-slate-400 leading-relaxed">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-black mb-2 sm:mb-4 text-white">Quality Guaranteed</h3>
+                <p className="text-sm sm:text-base text-slate-400 leading-relaxed">
                   Premium materials and craftsmanship backed by our comprehensive warranty and quality assurance.
                 </p>
               </Card>
@@ -130,14 +130,15 @@ export default function HomePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
-              whileHover={{ y: -10 }}>
+              whileHover={{ y: -10 }}
+              className="sm:col-span-2 lg:col-span-1">
 
-              <Card className="p-10 bg-gradient-to-br from-slate-800 to-slate-900 border-2 border-rose-500/20 hover:border-rose-500/50 shadow-xl hover:shadow-2xl hover:shadow-rose-500/20 transition-all h-full">
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-rose-500 to-pink-600 flex items-center justify-center mb-6 shadow-lg shadow-rose-500/30">
-                  <Award className="w-8 h-8 text-white" />
+              <Card className="p-6 sm:p-8 md:p-10 bg-gradient-to-br from-slate-800 to-slate-900 border-2 border-rose-500/20 hover:border-rose-500/50 shadow-xl hover:shadow-2xl hover:shadow-rose-500/20 transition-all h-full">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl sm:rounded-2xl bg-gradient-to-br from-rose-500 to-pink-600 flex items-center justify-center mb-4 sm:mb-6 shadow-lg shadow-rose-500/30">
+                  <Award className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-black mb-4 text-white">Expert Designers</h3>
-                <p className="text-slate-400 leading-relaxed">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-black mb-2 sm:mb-4 text-white">Expert Designers</h3>
+                <p className="text-sm sm:text-base text-slate-400 leading-relaxed">
                   Work with seasoned professionals who bring decades of experience in luxury interior design.
                 </p>
               </Card>
