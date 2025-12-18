@@ -147,7 +147,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-24 px-6 relative overflow-hidden">
+      <section className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-amber-900/10 via-transparent to-orange-900/10"></div>
         
         <div className="max-w-7xl mx-auto relative">
@@ -155,42 +155,71 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-20">
+            className="text-center mb-10 sm:mb-16 md:mb-20">
 
-            <h2 className="text-5xl md:text-6xl font-black text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-4 sm:mb-6">
               Select Your <span className="text-transparent bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text">Space Type</span>
             </h2>
-            <p className="text-xl text-slate-400 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-slate-400 max-w-2xl mx-auto px-2">
               Choose your home configuration and get an instant AI-powered cost estimate
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {[
-            { bhk: "1", color: "amber", desc: "Perfect for singles & couples", range: "400-600 sq ft" },
-            { bhk: "2", color: "orange", desc: "Ideal for small families", range: "700-1000 sq ft" },
-            { bhk: "3", color: "rose", desc: "Spacious family homes", range: "1100-1500 sq ft" }].
-            map((item, index) =>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 max-w-5xl mx-auto">
             <motion.div
-              key={item.bhk}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
+              transition={{ delay: 0.1 }}
               whileHover={{ scale: 1.05, y: -10 }}>
+              <Link href="/calculator/1bhk">
+                <Card className="p-8 sm:p-10 md:p-12 text-center cursor-pointer bg-gradient-to-br from-slate-800 to-slate-900 border-2 border-amber-500/30 hover:border-amber-500 shadow-xl hover:shadow-2xl hover:shadow-amber-500/30 transition-all group">
+                  <div className="text-6xl sm:text-7xl md:text-8xl font-black text-transparent bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text mb-2 sm:mb-4 group-hover:scale-110 transition-transform">
+                    1
+                  </div>
+                  <div className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-2 sm:mb-4">BHK</div>
+                  <p className="text-amber-400 text-base sm:text-lg font-bold mb-1 sm:mb-2">Perfect for singles & couples</p>
+                  <p className="text-slate-500 text-xs sm:text-sm">400-600 sq ft</p>
+                </Card>
+              </Link>
+            </motion.div>
 
-                <Link href={`/calculator/${item.bhk}bhk`}>
-                  <Card className={`p-12 text-center cursor-pointer bg-gradient-to-br from-slate-800 to-slate-900 border-2 border-${item.color}-500/30 hover:border-${item.color}-500 shadow-xl hover:shadow-2xl hover:shadow-${item.color}-500/30 transition-all group`}>
-                    <div className={`text-8xl font-black text-transparent bg-gradient-to-r from-${item.color}-400 to-${item.color}-600 bg-clip-text mb-4 group-hover:scale-110 transition-transform`}>
-                      {item.bhk}
-                    </div>
-                    <div className="text-5xl font-black text-white mb-4">BHK</div>
-                    <p className={`text-${item.color}-400 text-lg font-bold mb-2`}>{item.desc}</p>
-                    <p className="text-slate-500 text-sm">{item.range}</p>
-                  </Card>
-                </Link>
-              </motion.div>
-            )}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              whileHover={{ scale: 1.05, y: -10 }}>
+              <Link href="/calculator/2bhk">
+                <Card className="p-8 sm:p-10 md:p-12 text-center cursor-pointer bg-gradient-to-br from-slate-800 to-slate-900 border-2 border-orange-500/30 hover:border-orange-500 shadow-xl hover:shadow-2xl hover:shadow-orange-500/30 transition-all group">
+                  <div className="text-6xl sm:text-7xl md:text-8xl font-black text-transparent bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text mb-2 sm:mb-4 group-hover:scale-110 transition-transform">
+                    2
+                  </div>
+                  <div className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-2 sm:mb-4">BHK</div>
+                  <p className="text-orange-400 text-base sm:text-lg font-bold mb-1 sm:mb-2">Ideal for small families</p>
+                  <p className="text-slate-500 text-xs sm:text-sm">700-1000 sq ft</p>
+                </Card>
+              </Link>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              whileHover={{ scale: 1.05, y: -10 }}
+              className="sm:col-span-2 lg:col-span-1">
+              <Link href="/calculator/3bhk">
+                <Card className="p-8 sm:p-10 md:p-12 text-center cursor-pointer bg-gradient-to-br from-slate-800 to-slate-900 border-2 border-rose-500/30 hover:border-rose-500 shadow-xl hover:shadow-2xl hover:shadow-rose-500/30 transition-all group">
+                  <div className="text-6xl sm:text-7xl md:text-8xl font-black text-transparent bg-gradient-to-r from-rose-400 to-rose-600 bg-clip-text mb-2 sm:mb-4 group-hover:scale-110 transition-transform">
+                    3
+                  </div>
+                  <div className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-2 sm:mb-4">BHK</div>
+                  <p className="text-rose-400 text-base sm:text-lg font-bold mb-1 sm:mb-2">Spacious family homes</p>
+                  <p className="text-slate-500 text-xs sm:text-sm">1100-1500 sq ft</p>
+                </Card>
+              </Link>
+            </motion.div>
           </div>
         </div>
       </section>
