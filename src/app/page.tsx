@@ -224,27 +224,27 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-24 px-6 bg-gradient-to-br from-amber-900/10 to-orange-900/10">
+      <section className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 bg-gradient-to-br from-amber-900/10 to-orange-900/10">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}>
 
-            <h2 className="text-5xl md:text-6xl font-black text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-4 sm:mb-6">
               Ready to Get Started?
             </h2>
-            <p className="text-xl text-slate-400 mb-12">
+            <p className="text-base sm:text-lg md:text-xl text-slate-400 mb-8 sm:mb-10 md:mb-12 px-2">
               Contact us today for a free consultation and transform your space
             </p>
             <Button
               size="lg"
-              className="bg-gradient-to-r from-amber-500 via-orange-600 to-rose-600 hover:from-amber-400 hover:via-orange-500 hover:to-rose-500 text-white font-black px-16 py-8 text-xl rounded-2xl shadow-2xl shadow-amber-500/30 hover:shadow-amber-400/50 transition-all"
+              className="bg-gradient-to-r from-amber-500 via-orange-600 to-rose-600 hover:from-amber-400 hover:via-orange-500 hover:to-rose-500 text-white font-black px-8 sm:px-12 md:px-16 py-5 sm:py-6 md:py-8 text-base sm:text-lg md:text-xl rounded-2xl shadow-2xl shadow-amber-500/30 hover:shadow-amber-400/50 transition-all w-full sm:w-auto"
               asChild>
 
               <Link href="/contact">
                 Contact Us Now
-                <ArrowRight className="w-6 h-6 ml-3" />
+                <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 ml-2 sm:ml-3" />
               </Link>
             </Button>
           </motion.div>
