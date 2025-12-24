@@ -62,7 +62,7 @@ export default function HomePage() {
                 className="border-2 border-secondary/30 hover:border-secondary bg-transparent text-secondary font-black px-6 sm:px-8 md:px-12 py-5 sm:py-6 md:py-8 text-base sm:text-lg md:text-xl rounded-2xl backdrop-blur-xl transition-all w-full sm:w-auto"
                 asChild>
 
-                <Link href="/calculator/1bhk">
+                <Link href="/calculator">
                   <Sparkles className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3" />
                   Get Free Estimate
                 </Link>
