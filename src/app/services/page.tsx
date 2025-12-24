@@ -47,7 +47,7 @@ export default function ServicesPage() {
     },
     {
       icon: Sparkles,
-      title: "Luxury Finishing",
+      title: "Commercial Services",
       description: "Premium finishing touches that elevate your space. From designer wallpapers to custom moldings, we perfect every detail.",
       features: ["Designer materials", "Custom textures", "Premium paints", "Detail perfection"],
       color: "rose",
