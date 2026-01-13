@@ -241,7 +241,7 @@ export default function CalculatorPage() {
                         {selectedOptions.length > 0 && (
                           <div className="flex justify-between items-center text-foreground/60 text-xs p-3 rounded-lg bg-foreground/5 border border-foreground/5 italic font-bold">
                             <span>AI Complexity Factor</span>
-                            <span>+{selectedOptions.length * 2}%</span>
+                            <span>+{selectedOptions.length * 1}%</span>
                           </div>
                         )}
                       </div>

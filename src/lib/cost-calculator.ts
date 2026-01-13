@@ -124,27 +124,65 @@ export const bhkConfigurations: Record<string, BHKConfig> = {
     basePrice: 600000,
     sqftRange: "1100-1500 sq ft",
     baseIncludes: [
-      "Living room",
-      "Kitchen",
-      "3 Bedrooms",
-      "False ceiling",
-      "Wardrobes",
-      "TV unit",
-      "Painting"
+      "Semi modular kitchen",
+      "hall area with false ceiling+ with wiring and lights",
+      "2 Hydraulic beds",
+      "2 wardrobes",
+      "1 tv unit",
+      "1 mandir unit",
+      "3 seater sofa with center table",
+      "Study room",
+      "inside paint"
     ],
     options: [
-      { id: "modular-kitchen", name: "Modular Kitchen", baseCost: 150000, description: "Complete kitchen with cabinets & appliances" },
-      { id: "false-ceiling", name: "False Ceiling", baseCost: 80000, description: "Designer false ceiling with lighting" },
-      { id: "wardrobe", name: "Wardrobes (3 Rooms)", baseCost: 120000, description: "Custom built-in wardrobes" },
-      { id: "tv-unit", name: "TV Unit", baseCost: 50000, description: "Modern TV unit with storage" },
-      { id: "lighting", name: "Premium Lighting", baseCost: 60000, description: "LED lights with smart controls" },
-      { id: "flooring", name: "Premium Flooring", baseCost: 130000, description: "Vitrified tiles or wooden flooring" },
-      { id: "bathroom", name: "Bathroom Upgrade (3)", baseCost: 105000, description: "Premium fixtures & fittings" },
-      { id: "paint", name: "Premium Paint", baseCost: 50000, description: "Asian Paints Royale or similar" },
-      { id: "dining", name: "Dining Area", baseCost: 65000, description: "Custom dining furniture" },
-      { id: "balcony", name: "Balcony Design", baseCost: 45000, description: "Balcony flooring & furniture" },
-      { id: "pooja-room", name: "Pooja Room", baseCost: 35000, description: "Custom pooja unit design" },
-      { id: "study-room", name: "Study Room", baseCost: 55000, description: "Study table & bookshelves" },
+      { 
+        id: "upgraded-modular-kitchen", 
+        name: "Upgraded Modular Kitchen", 
+        baseCost: 100000, 
+        description: "Premium modular kitchen with high-end finishes and hardware" 
+      },
+      { 
+        id: "upgraded-false-ceiling", 
+        name: "Upgraded False Celling", 
+        baseCost: 168000, 
+        description: "Designer false ceiling for all rooms with premium lighting zones" 
+      },
+      { 
+        id: "full-wall-wardrobe-dressing", 
+        name: "Full Wall Wardrobe with Dressing Unit", 
+        baseCost: 120000, 
+        description: "Floor-to-ceiling wardrobe integrated with a stylish dressing unit" 
+      },
+      { 
+        id: "master-bedroom-tv-unit", 
+        name: "Master Bedroom TV Unit", 
+        baseCost: 25000, 
+        description: "Custom designed luxury TV console for the master bedroom" 
+      },
+      { 
+        id: "premium-flooring", 
+        name: "Premium Flooring", 
+        baseCost: 100000, 
+        description: "High-quality vitrified tiles or wooden flooring for the entire home" 
+      },
+      { 
+        id: "premium-lighting", 
+        name: "Premium Lighting", 
+        baseCost: 50000, 
+        description: "Designer lighting fixtures and smart control systems" 
+      },
+      { 
+        id: "study-room-door-paneling", 
+        name: "Study Room Door Paneling", 
+        baseCost: 36000, 
+        description: "Premium wooden door frames and matching wall panelling for study room" 
+      },
+      { 
+        id: "bathroom-upgrade", 
+        name: "Bathroom Upgrade", 
+        baseCost: 100000, 
+        description: "Luxury bathroom fixtures, premium tiling, and designer vanity units" 
+      },
     ]
   }
 }
@@ -162,9 +200,9 @@ export function calculateCost(bhkType: string, selectedOptions: string[]): numbe
     }
   })
 
-  const designComplexityFactor = selectedOptions.length > 0 
-    ? 1 + (selectedOptions.length * 0.02) 
-    : 1
+    const designComplexityFactor = selectedOptions.length > 0 
+      ? 1 + (selectedOptions.length * 0.01) 
+      : 1
 
   const aiAdjustedCost = Math.round(totalCost * designComplexityFactor)
 
@@ -188,8 +226,8 @@ export function getRecommendations(bhkType: string, selectedOptions: string[]): 
         recommendations.push("Consider upgrading to a Modular Kitchen for better functionality and aesthetics")
       }
     } else {
-      if (!selectedOptions.includes("modular-kitchen")) {
-        recommendations.push("Consider adding a Modular Kitchen for better functionality and aesthetics")
+      if (!selectedOptions.includes("upgraded-modular-kitchen")) {
+        recommendations.push("Consider upgrading to a Modular Kitchen for better functionality and aesthetics")
       }
     }
 
