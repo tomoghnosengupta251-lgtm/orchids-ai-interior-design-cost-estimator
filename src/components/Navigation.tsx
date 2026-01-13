@@ -10,7 +10,7 @@ export function Navigation() {
   const pathname = usePathname()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
-  useEffect(() => {
+    useEffect(() => {
     // Ensure the browser tab shows the correct site title
     document.title = "My Interio World";
   }, [])

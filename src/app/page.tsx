@@ -29,7 +29,7 @@ export default function HomePage() {
               transition={{ delay: 0.2, duration: 0.6 }}
               className="inline-block mb-4 sm:mb-6 px-4 sm:px-6 py-2 rounded-full bg-secondary/10 border border-secondary/20">
 
-              <span className="text-secondary font-bold text-sm sm:text-base">✨ Premispanum Interior Design</span>
+              <span className="text-secondary font-bold text-sm sm:text-base">✨ My Interio World</span>
             </motion.div>
 
             <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-black mb-4 sm:mb-6 md:mb-8 leading-tight">

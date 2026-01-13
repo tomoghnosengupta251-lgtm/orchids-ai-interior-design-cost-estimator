@@ -1,9 +1,4 @@
 /* Updated: 2025-12-18T08:43:10.439Z */
-/* Updated: 2025-12-18T06:21:36.337Z */
-/* Updated: 2025-12-18T06:21:23.392Z */
-/* Updated: 2025-12-18T06:21:12.425Z */
-/* Updated: 2025-12-17T17:52:17.733Z */
-/* Updated: 2025-12-17T16:52:06.113Z */
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -12,7 +7,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+    --font-sans: var(--font-inter);
   --font-mono: var(--font-geist-mono);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -54,71 +49,37 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(0.96 0.02 95);
-  --foreground: oklch(0 0 0);
-  --card: oklch(0.96 0.02 95);
-  --card-foreground: oklch(0 0 0);
-  --popover: oklch(0.96 0.02 95);
-  --popover-foreground: oklch(0 0 0);
-  --primary: oklch(0 0 0);
-  --primary-foreground: oklch(0.96 0.02 95);
-  --secondary: oklch(0.7 0.05 75);
-  --secondary-foreground: oklch(0 0 0);
-  --muted: oklch(0.92 0.02 95);
-  --muted-foreground: oklch(0.4 0.02 75);
-  --accent: oklch(0.7 0.05 75);
-  --accent-foreground: oklch(0 0 0);
+  --background: oklch(0.1 0 0);
+  --foreground: oklch(0.96 0.02 95);
+  --card: oklch(0.12 0 0);
+  --card-foreground: oklch(0.96 0.02 95);
+  --popover: oklch(0.12 0 0);
+  --popover-foreground: oklch(0.96 0.02 95);
+  --primary: oklch(0.75 0.15 85);
+  --primary-foreground: oklch(0.1 0 0);
+  --secondary: oklch(0.75 0.15 85);
+  --secondary-foreground: oklch(0.1 0 0);
+  --muted: oklch(0.2 0 0);
+  --muted-foreground: oklch(0.75 0.15 85 / 0.7);
+  --accent: oklch(0.75 0.15 85);
+  --accent-foreground: oklch(0.1 0 0);
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.7 0.05 75 / 0.3);
-  --input: oklch(0.7 0.05 75 / 0.3);
-  --ring: oklch(0 0 0);
-  --chart-1: oklch(0 0 0);
-  --chart-2: oklch(0.7 0.05 75);
+  --border: oklch(0.75 0.15 85 / 0.2);
+  --input: oklch(0.75 0.15 85 / 0.2);
+  --ring: oklch(0.75 0.15 85);
+  --chart-1: oklch(0.75 0.15 85);
+  --chart-2: oklch(0.96 0.02 95);
   --chart-3: oklch(0.4 0.02 75);
   --chart-4: oklch(0.2 0 0);
   --chart-5: oklch(0.1 0 0);
-  --sidebar: oklch(0.96 0.02 95);
-  --sidebar-foreground: oklch(0 0 0);
-  --sidebar-primary: oklch(0 0 0);
-  --sidebar-primary-foreground: oklch(0.96 0.02 95);
-  --sidebar-accent: oklch(0.7 0.05 75);
-  --sidebar-accent-foreground: oklch(0 0 0);
-  --sidebar-border: oklch(0.7 0.05 75 / 0.3);
-  --sidebar-ring: oklch(0 0 0);
-}
-
-.dark {
-  --background: oklch(0 0 0);
-  --foreground: oklch(0.96 0.02 95);
-  --card: oklch(0.1 0 0);
-  --card-foreground: oklch(0.96 0.02 95);
-  --popover: oklch(0.1 0 0);
-  --popover-foreground: oklch(0.96 0.02 95);
-  --primary: oklch(0.96 0.02 95);
-  --primary-foreground: oklch(0 0 0);
-  --secondary: oklch(0.7 0.05 75);
-  --secondary-foreground: oklch(0.96 0.02 95);
-  --muted: oklch(0.2 0 0);
-  --muted-foreground: oklch(0.7 0.05 75);
-  --accent: oklch(0.7 0.05 75);
-  --accent-foreground: oklch(0.96 0.02 95);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(0.7 0.05 75 / 0.5);
-  --input: oklch(0.7 0.05 75 / 0.5);
-  --ring: oklch(0.96 0.02 95);
-  --chart-1: oklch(0.96 0.02 95);
-  --chart-2: oklch(0.7 0.05 75);
-  --chart-3: oklch(0.5 0.05 75);
-  --chart-4: oklch(0.3 0 0);
-  --chart-5: oklch(0.2 0 0);
-  --sidebar: oklch(0.1 0 0);
+  --sidebar: oklch(0.12 0 0);
   --sidebar-foreground: oklch(0.96 0.02 95);
-  --sidebar-primary: oklch(0.96 0.02 95);
-  --sidebar-primary-foreground: oklch(0 0 0);
-  --sidebar-accent: oklch(0.7 0.05 75);
-  --sidebar-accent-foreground: oklch(0.96 0.02 95);
-  --sidebar-border: oklch(0.7 0.05 75 / 0.5);
-  --sidebar-ring: oklch(0.96 0.02 95);
+  --sidebar-primary: oklch(0.75 0.15 85);
+  --sidebar-primary-foreground: oklch(0.1 0 0);
+  --sidebar-accent: oklch(0.75 0.15 85 / 0.1);
+  --sidebar-accent-foreground: oklch(0.75 0.15 85);
+  --sidebar-border: oklch(0.75 0.15 85 / 0.2);
+  --sidebar-ring: oklch(0.75 0.15 85);
 }
 
 @layer base {
@@ -134,21 +95,15 @@
     -moz-osx-font-smoothing: grayscale;
   }
 }
-/* Hide Next.js dev indicator portal */
+
 nextjs-portal {
   display: none !important;
 }
 
 @keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .animate-gradient {
