@@ -140,15 +140,14 @@ baseIncludes: [
         { name: "Study Room", description: "Study table & bookshelves" }
       ],
     options: [
-      { id: "modular-kitchen", name: "Modular Kitchen", baseCost: 150000, description: "Complete kitchen with cabinets & appliances" },
-      { id: "false-ceiling", name: "False Ceiling", baseCost: 80000, description: "Designer false ceiling with lighting" },
-      { id: "wardrobe", name: "Wardrobes (3 Rooms)", baseCost: 120000, description: "Custom built-in wardrobes" },
-      { id: "tv-unit", name: "TV Unit", baseCost: 50000, description: "Modern TV unit with storage" },
-      { id: "lighting", name: "Premium Lighting", baseCost: 60000, description: "LED lights with smart controls" },
-      { id: "flooring", name: "Premium Flooring", baseCost: 130000, description: "Vitrified tiles or wooden flooring" },
-      { id: "bathroom", name: "Bathroom Upgrade (3)", baseCost: 105000, description: "Premium fixtures & fittings" },
+      { id: "modular-kitchen", name: "Modular Kitchen", baseCost: 100000, description: "Complete kitchen with cabinets & appliances" },
+      { id: "false-ceiling", name: "Entire False Ceiling", baseCost: 168000, description: "Designer false ceiling with lighting" },
+      { id: "wardrobe", name: "Wardrobes", baseCost: 120000, description: "Custom built-in wardrobes" },
+      { id: "tv-unit", name: "TV Unit", baseCost: 25000, description: "Modern TV unit with storage" },
+      { id: "lighting", name: "Premium Lighting", baseCost: 50000, description: "LED lights with smart controls" },
+      { id: "flooring", name: "Premium Flooring", baseCost: 100000, description: "Vitrified tiles or wooden flooring" },
+      { id: "bathroom", name: "Bathroom Upgrades", baseCost: 100000, description: "Premium fixtures & fittings" },
       { id: "door-panelling", name: "Door Panelling", baseCost: 36000, description: "Premium wooden door panelling for an upscale look" },
-      { id: "pooja-room", name: "Pooja Room", baseCost: 35000, description: "Custom pooja unit design" },
     ]
   }
 }
