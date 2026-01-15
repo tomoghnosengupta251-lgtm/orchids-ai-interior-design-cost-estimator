@@ -136,7 +136,8 @@ baseIncludes: [
         { name: "1 tv unit", description: "Modern TV console with cable management and display shelves" },
         { name: "1 mandir unit", description: "Traditional pooja unit with elegant wooden finish" },
         { name: "3 seater sofa with center table", description: "Comfortable sofa set with matching center table" },
-        { name: "inside paint", description: "Quality interior painting with smooth elegant finish" }
+        { name: "inside paint", description: "Quality interior painting with smooth elegant finish" },
+        { name: "Study Room", description: "Study table & bookshelves" }
       ],
     options: [
       { id: "modular-kitchen", name: "Modular Kitchen", baseCost: 150000, description: "Complete kitchen with cabinets & appliances" },
@@ -148,7 +149,6 @@ baseIncludes: [
       { id: "bathroom", name: "Bathroom Upgrade (3)", baseCost: 105000, description: "Premium fixtures & fittings" },
       { id: "door-panelling", name: "Door Panelling", baseCost: 36000, description: "Premium wooden door panelling for an upscale look" },
       { id: "pooja-room", name: "Pooja Room", baseCost: 35000, description: "Custom pooja unit design" },
-      { id: "study-room", name: "Study Room", baseCost: 55000, description: "Study table & bookshelves" },
     ]
   }
 }
