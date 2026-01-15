@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowRight, Sparkles, TrendingUp, Shield, Award, Instagram, Youtube, Facebook } from "lucide-react";
+import { ArrowRight, Sparkles, TrendingUp, Shield, Award } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Navigation } from "@/components/Navigation";
@@ -220,82 +220,6 @@ export default function HomePage() {
                 </Card>
               </Link>
             </motion.div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-12 sm:py-16 md:py-24 px-4 sm:px-6">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-10 sm:mb-16 md:mb-20">
-
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-foreground mb-4 sm:mb-6">
-              See Our <span className="text-secondary">Work in Action</span>
-            </h2>
-            <p className="text-base sm:text-lg md:text-xl text-foreground/60 max-w-2xl mx-auto px-2">
-              Follow us on social media to see our latest projects, design inspiration, and transformations
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            <motion.a
-              href="https://www.instagram.com/my_interioworld?igsh=ZjYwaXY1MXBjNDN5"
-              target="_blank"
-              rel="noopener noreferrer"
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              whileHover={{ y: -10, scale: 1.02 }}
-              className="group relative overflow-hidden rounded-[2.5rem] p-8 bg-gradient-to-br from-[#f09433] via-[#dc2743] to-[#bc1888] text-white flex flex-col items-center justify-center text-center h-72 shadow-2xl transition-all"
-            >
-              <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity" />
-              <Instagram className="w-16 h-16 mb-6 group-hover:scale-110 transition-transform" />
-              <h3 className="text-2xl font-black mb-2">Instagram</h3>
-              <p className="text-white/80 font-medium">Latest Trends & Reels</p>
-              <div className="mt-6 px-6 py-2 bg-white/20 rounded-full text-sm font-bold backdrop-blur-sm group-hover:bg-white/30 transition-colors">
-                Follow Us
-              </div>
-            </motion.a>
-
-            <motion.a
-              href="https://www.youtube.com/@Interioworld2016"
-              target="_blank"
-              rel="noopener noreferrer"
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              whileHover={{ y: -10, scale: 1.02 }}
-              transition={{ delay: 0.1 }}
-              className="group relative overflow-hidden rounded-[2.5rem] p-8 bg-[#FF0000] text-white flex flex-col items-center justify-center text-center h-72 shadow-2xl transition-all"
-            >
-              <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity" />
-              <Youtube className="w-16 h-16 mb-6 group-hover:scale-110 transition-transform" />
-              <h3 className="text-2xl font-black mb-2">YouTube</h3>
-              <p className="text-white/80 font-medium">Project Walkthroughs</p>
-              <div className="mt-6 px-6 py-2 bg-white/20 rounded-full text-sm font-bold backdrop-blur-sm group-hover:bg-white/30 transition-colors">
-                Subscribe
-              </div>
-            </motion.a>
-
-            <motion.a
-              href="https://www.facebook.com/share/1GLv7HZ7UF/"
-              target="_blank"
-              rel="noopener noreferrer"
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              whileHover={{ y: -10, scale: 1.02 }}
-              transition={{ delay: 0.2 }}
-              className="group relative overflow-hidden rounded-[2.5rem] p-8 bg-[#1877F2] text-white flex flex-col items-center justify-center text-center h-72 shadow-2xl transition-all"
-            >
-              <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity" />
-              <Facebook className="w-16 h-16 mb-6 group-hover:scale-110 transition-transform" />
-              <h3 className="text-2xl font-black mb-2">Facebook</h3>
-              <p className="text-white/80 font-medium">Join Our Community</p>
-              <div className="mt-6 px-6 py-2 bg-white/20 rounded-full text-sm font-bold backdrop-blur-sm group-hover:bg-white/30 transition-colors">
-                Connect
-              </div>
-            </motion.a>
           </div>
         </div>
       </section>

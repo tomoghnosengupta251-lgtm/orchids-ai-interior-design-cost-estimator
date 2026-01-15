@@ -171,10 +171,13 @@ export default function CalculatorPage() {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.5 + (i * 0.1) }}
-                            className="flex items-center gap-3 text-foreground/80 font-bold bg-background/50 p-4 rounded-xl border border-foreground/5"
+                            className="flex flex-col gap-1 text-foreground/80 bg-background/50 p-4 rounded-xl border border-foreground/5"
                           >
-                            <div className="w-2 h-2 rounded-full bg-foreground" />
-                            {item}
+                            <div className="flex items-center gap-3">
+                              <div className="w-2 h-2 rounded-full bg-foreground flex-shrink-0" />
+                              <span className="font-bold">{item.name}</span>
+                            </div>
+                            <p className="text-xs text-foreground/50 pl-5">{item.description}</p>
                           </motion.div>
                         ))}
                       </div>
@@ -241,7 +244,7 @@ export default function CalculatorPage() {
                         {selectedOptions.length > 0 && (
                           <div className="flex justify-between items-center text-foreground/60 text-xs p-3 rounded-lg bg-foreground/5 border border-foreground/5 italic font-bold">
                             <span>AI Complexity Factor</span>
-                            <span>+{selectedOptions.length * 1}%</span>
+                            <span>+{selectedOptions.length * 2}%</span>
                           </div>
                         )}
                       </div>
