@@ -129,13 +129,14 @@ baseIncludes: [
     basePrice: 600000,
     sqftRange: "1100-1500 sq ft",
 baseIncludes: [
-        { name: "Living room", description: "Spacious living area with premium design elements" },
-        { name: "Kitchen", description: "Fully functional kitchen with modern amenities" },
-        { name: "3 Bedrooms", description: "Well-designed bedrooms with comfortable layouts" },
-        { name: "False ceiling", description: "Designer false ceiling throughout with ambient lighting" },
-        { name: "Wardrobes", description: "Built-in wardrobes for all three bedrooms" },
-        { name: "TV unit", description: "Contemporary TV unit with storage and display options" },
-        { name: "Painting", description: "Complete interior painting with premium finish" }
+        { name: "Semi modular kitchen", description: "Ready-to-assemble kitchen with essential cabinets and storage" },
+        { name: "Hall area with false ceiling+ with wiring and lights", description: "Elegant living space with designer ceiling and integrated lighting" },
+        { name: "2 Hydraulic beds", description: "Space-saving beds with hydraulic lift storage mechanism" },
+        { name: "2 wardrobes", description: "Dual wardrobes with ample storage for both bedrooms" },
+        { name: "1 tv unit", description: "Modern TV console with cable management and display shelves" },
+        { name: "1 mandir unit", description: "Traditional pooja unit with elegant wooden finish" },
+        { name: "3 seater sofa with center table", description: "Comfortable sofa set with matching center table" },
+        { name: "inside paint", description: "Quality interior painting with smooth elegant finish" }
       ],
     options: [
       { id: "modular-kitchen", name: "Modular Kitchen", baseCost: 100000, description: "Complete kitchen with cabinets & appliances" },
