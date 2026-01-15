@@ -129,26 +129,27 @@ baseIncludes: [
     basePrice: 600000,
     sqftRange: "1100-1500 sq ft",
 baseIncludes: [
-        { name: "Semi modular kitchen", description: "Ready-to-assemble kitchen with essential cabinets and storage" },
-        { name: "Hall area with false ceiling+ with wiring and lights", description: "Elegant living space with designer ceiling and integrated lighting" },
-        { name: "2 Hydraulic beds", description: "Space-saving beds with hydraulic lift storage mechanism" },
-        { name: "2 wardrobes", description: "Dual wardrobes with ample storage for both bedrooms" },
-        { name: "1 tv unit", description: "Modern TV console with cable management and display shelves" },
-        { name: "1 mandir unit", description: "Traditional pooja unit with elegant wooden finish" },
-        { name: "3 seater sofa with center table", description: "Comfortable sofa set with matching center table" },
-        { name: "inside paint", description: "Quality interior painting with smooth elegant finish" },
-        { name: "Study Room", description: "Study table & bookshelves" }
+        { name: "Living room", description: "Spacious living area with premium design elements" },
+        { name: "Kitchen", description: "Fully functional kitchen with modern amenities" },
+        { name: "3 Bedrooms", description: "Well-designed bedrooms with comfortable layouts" },
+        { name: "False ceiling", description: "Designer false ceiling throughout with ambient lighting" },
+        { name: "Wardrobes", description: "Built-in wardrobes for all three bedrooms" },
+        { name: "TV unit", description: "Contemporary TV unit with storage and display options" },
+        { name: "Painting", description: "Complete interior painting with premium finish" }
       ],
     options: [
       { id: "modular-kitchen", name: "Modular Kitchen", baseCost: 150000, description: "Complete kitchen with cabinets & appliances" },
-      { id: "false-ceiling", name: "False Ceiling", baseCost: 80000, description: "Designer false ceiling with lighting" },
+      { id: "false-ceiling", name: "Entire False Ceiling", baseCost: 168000, description: "Designer false ceiling with lighting" },
       { id: "wardrobe", name: "Wardrobes (3 Rooms)", baseCost: 120000, description: "Custom built-in wardrobes" },
       { id: "tv-unit", name: "TV Unit", baseCost: 50000, description: "Modern TV unit with storage" },
-      { id: "lighting", name: "Premium Lighting", baseCost: 50000, description: "LED lights with smart controls" },
+      { id: "lighting", name: "Premium Lighting", baseCost: 60000, description: "LED lights with smart controls" },
       { id: "flooring", name: "Premium Flooring", baseCost: 130000, description: "Vitrified tiles or wooden flooring" },
       { id: "bathroom", name: "Bathroom Upgrade (3)", baseCost: 105000, description: "Premium fixtures & fittings" },
-      { id: "door-panelling", name: "Door Panelling", baseCost: 36000, description: "Premium wooden door panelling for an upscale look" },
+      { id: "paint", name: "Premium Paint", baseCost: 50000, description: "Asian Paints Royale or similar" },
+      { id: "dining", name: "Dining Area", baseCost: 65000, description: "Custom dining furniture" },
+      { id: "balcony", name: "Balcony Design", baseCost: 45000, description: "Balcony flooring & furniture" },
       { id: "pooja-room", name: "Pooja Room", baseCost: 35000, description: "Custom pooja unit design" },
+      { id: "study-room", name: "Study Room", baseCost: 55000, description: "Study table & bookshelves" },
     ]
   }
 }
