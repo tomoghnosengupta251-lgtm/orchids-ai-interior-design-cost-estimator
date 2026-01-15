@@ -168,7 +168,7 @@ export function calculateCost(bhkType: string, selectedOptions: string[]): numbe
   })
 
   const designComplexityFactor = selectedOptions.length > 0 
-    ? 1 + (selectedOptions.length * 0.02) 
+    ? 1 + (selectedOptions.length * 0.01) 
     : 1
 
   const aiAdjustedCost = Math.round(totalCost * designComplexityFactor)
