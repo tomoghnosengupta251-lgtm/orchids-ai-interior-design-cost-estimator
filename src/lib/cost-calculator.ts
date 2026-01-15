@@ -138,7 +138,7 @@ baseIncludes: [
         { name: "Painting", description: "Complete interior painting with premium finish" }
       ],
     options: [
-      { id: "modular-kitchen", name: "Modular Kitchen", baseCost: 150000, description: "Complete kitchen with cabinets & appliances" },
+      { id: "modular-kitchen", name: "Modular Kitchen", baseCost: 100000, description: "Complete kitchen with cabinets & appliances" },
       { id: "false-ceiling", name: "Entire False Ceiling", baseCost: 168000, description: "Designer false ceiling with lighting" },
       { id: "wardrobe", name: "Wardrobes (3 Rooms)", baseCost: 120000, description: "Custom built-in wardrobes" },
       { id: "tv-unit", name: "TV Unit", baseCost: 50000, description: "Modern TV unit with storage" },
