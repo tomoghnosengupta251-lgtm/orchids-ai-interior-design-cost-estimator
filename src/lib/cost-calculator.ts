@@ -202,3 +202,29 @@ export function getRecommendations(bhkType: string, selectedOptions: string[]): 
 
   return recommendations
 }
+export function calculateEstimate(bhkType: string, selectedOptions: string[]) {
+  const config = bhkConfigurations[bhkType];
+  if (!config) return null;
+
+  let beforeFactorTotal = config.basePrice;
+
+  const upgrades = selectedOptions.map(id => {
+    const opt = config.options.find(o => o.id === id);
+    if (!opt) return null;
+    beforeFactorTotal += opt.baseCost;
+    return { name: opt.name, cost: opt.baseCost };
+  }).filter(Boolean);
+
+  const complexityFactor = selectedOptions.length > 0
+    ? 1 + (selectedOptions.length * 0.02)
+    : 1;
+
+  const totalCost = Math.round(beforeFactorTotal * complexityFactor);
+
+  return {
+    basePackage: config.basePrice,
+    upgrades,
+    complexityFactor,
+    totalCost
+  };
+}
