@@ -5,16 +5,64 @@ import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 
 export async function POST(req: Request) {
-  await connectDB();
-  const { email, password } = await req.json();
-  const user = await User.findOne({ email });
-  if (!user) return NextResponse.json({ error: "User not found" }, { status: 400 });
+  try {
+    const body = await req.json();
+    const { email, password } = body;
 
-  const valid = await bcrypt.compare(password, user.password);
-  if (!valid) return NextResponse.json({ error: "Invalid password" }, { status: 400 });
+    // 🔒 BACKEND VALIDATION
+    if (!email || !password) {
+      return NextResponse.json(
+        { error: "Email and password are required" },
+        { status: 400 }
+      );
+    }
 
-  const token = jwt.sign({ email }, process.env.JWT_SECRET!, { expiresIn: "30d" });
-  const res = NextResponse.json({ success: true });
-  res.cookies.set("auth", token, { httpOnly: true, path: "/" });
-  return res;
+    if (typeof email !== "string" || !email.includes("@")) {
+      return NextResponse.json(
+        { error: "Invalid email" },
+        { status: 400 }
+      );
+    }
+
+    await connectDB();
+
+    const user = await User.findOne({ email });
+    if (!user) {
+      return NextResponse.json(
+        { error: "User not found" },
+        { status: 404 }
+      );
+    }
+
+    const valid = await bcrypt.compare(password, user.password);
+    if (!valid) {
+      return NextResponse.json(
+        { error: "Invalid password" },
+        { status: 401 }
+      );
+    }
+
+    const token = jwt.sign(
+      { email },
+      process.env.JWT_SECRET!,
+      { expiresIn: "30d" }
+    );
+
+    const res = NextResponse.json({ success: true });
+
+    res.cookies.set("auth", token, {
+      httpOnly: true,
+      path: "/",
+      sameSite: "lax",
+      secure: process.env.NODE_ENV === "production"
+    });
+
+    return res;
+
+  } catch (error) {
+    return NextResponse.json(
+      { error: "Login failed" },
+      { status: 500 }
+    );
+  }
 }
