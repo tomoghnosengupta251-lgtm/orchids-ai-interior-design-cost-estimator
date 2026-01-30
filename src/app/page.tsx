@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowRight, Sparkles, TrendingUp, Shield, Award } from "lucide-react";
+import { ArrowRight, Sparkles, TrendingUp, Shield, Award, Instagram, Youtube, Facebook } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Navigation } from "@/components/Navigation";
@@ -219,6 +219,112 @@ export default function HomePage() {
                   <p className="text-foreground/40 text-xs sm:text-sm">1100-1500 sq ft</p>
                 </Card>
               </Link>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 bg-background relative overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-10 sm:mb-16 md:mb-20">
+
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-foreground mb-4 sm:mb-6">
+              Connect With <span className="text-secondary">Us</span>
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl text-foreground/60 max-w-2xl mx-auto px-2">
+              Follow our social channels to see our latest work and interior transformations
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto">
+            <motion.div
+              whileHover={{ y: -10 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+            >
+              <a
+                href="https://www.instagram.com/my_interioworld?igsh=ZjYwaXY1MXBjNDN5"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block h-full"
+              >
+                <Card className="h-full p-8 flex flex-col items-center text-center gap-6 border-2 border-transparent hover:border-[#E1306C]/50 bg-gradient-to-br from-background to-[#E1306C]/5 hover:shadow-2xl hover:shadow-[#E1306C]/10 transition-all group">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-tr from-[#FFDC80] via-[#E1306C] to-[#C13584] p-0.5 group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-full h-full bg-background rounded-full flex items-center justify-center">
+                      <Instagram className="w-8 h-8 text-[#E1306C]" />
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">Instagram</h3>
+                    <p className="text-sm text-foreground/70">Daily inspiration & behind the scenes</p>
+                  </div>
+                  <div className="mt-auto font-bold text-[#E1306C] flex items-center gap-2 group-hover:translate-x-1 transition-transform">
+                    Follow Us <ArrowRight className="w-4 h-4" />
+                  </div>
+                </Card>
+              </a>
+            </motion.div>
+
+            <motion.div
+              whileHover={{ y: -10 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+            >
+              <a
+                href="https://www.youtube.com/@Interioworld2016"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block h-full"
+              >
+                <Card className="h-full p-8 flex flex-col items-center text-center gap-6 border-2 border-transparent hover:border-[#FF0000]/50 bg-gradient-to-br from-background to-[#FF0000]/5 hover:shadow-2xl hover:shadow-[#FF0000]/10 transition-all group">
+                  <div className="w-16 h-16 rounded-full bg-[#FF0000] p-0.5 group-hover:scale-110 transition-transform duration-300 flex items-center justify-center shadow-lg shadow-[#FF0000]/30 mr-0">
+                    <Youtube className="w-8 h-8 text-white fill-current" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">YouTube</h3>
+                    <p className="text-sm text-foreground/70">Full home tours & transformations</p>
+                  </div>
+                  <div className="mt-auto font-bold text-[#FF0000] flex items-center gap-2 group-hover:translate-x-1 transition-transform">
+                    Subscribe <ArrowRight className="w-4 h-4" />
+                  </div>
+                </Card>
+              </a>
+            </motion.div>
+
+            <motion.div
+              whileHover={{ y: -10 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+            >
+              <a
+                href="https://www.facebook.com/share/1GLv7HZ7UF/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block h-full"
+              >
+                <Card className="h-full p-8 flex flex-col items-center text-center gap-6 border-2 border-transparent hover:border-[#1877F2]/50 bg-gradient-to-br from-background to-[#1877F2]/5 hover:shadow-2xl hover:shadow-[#1877F2]/10 transition-all group">
+                  <div className="w-16 h-16 rounded-full bg-[#1877F2] p-0.5 group-hover:scale-110 transition-transform duration-300 flex items-center justify-center shadow-lg shadow-[#1877F2]/30">
+                    <Facebook className="w-8 h-8 text-white fill-current" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">Facebook</h3>
+                    <p className="text-sm text-foreground/70">Community updates & reviews</p>
+                  </div>
+                  <div className="mt-auto font-bold text-[#1877F2] flex items-center gap-2 group-hover:translate-x-1 transition-transform">
+                    Join Us <ArrowRight className="w-4 h-4" />
+                  </div>
+                </Card>
+              </a>
             </motion.div>
           </div>
         </div>
