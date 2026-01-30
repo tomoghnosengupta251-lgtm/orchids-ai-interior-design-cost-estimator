@@ -15,7 +15,7 @@ export default function HomePage() {
 
       <section className="relative pt-24 sm:pt-32 md:pt-40 pb-16 sm:pb-24 md:pb-32 px-4 sm:px-6 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-foreground/5 via-transparent to-transparent"></div>
-        
+
         <div className="max-w-6xl mx-auto relative">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -29,7 +29,7 @@ export default function HomePage() {
               transition={{ delay: 0.2, duration: 0.6 }}
               className="inline-block mb-4 sm:mb-6 px-4 sm:px-6 py-2 rounded-full bg-secondary/10 border border-secondary/20">
 
-              <span className="text-secondary font-bold text-sm sm:text-base">✨ My Interio World</span>
+              <span className="text-secondary font-bold text-sm sm:text-base">✨ Interio World</span>
             </motion.div>
 
             <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-black mb-4 sm:mb-6 md:mb-8 leading-tight">
@@ -40,7 +40,7 @@ export default function HomePage() {
             </h1>
 
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-foreground/70 mb-8 sm:mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed px-2">
-              Transform your home with expert interior design and construction services. 
+              Transform your home with expert interior design and construction services.
               Get instant AI-powered cost estimates tailored to your vision.
             </p>
 
@@ -149,7 +149,7 @@ export default function HomePage() {
 
       <section className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 relative overflow-hidden">
         <div className="absolute inset-0 bg-secondary/5"></div>
-        
+
         <div className="max-w-7xl mx-auto relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

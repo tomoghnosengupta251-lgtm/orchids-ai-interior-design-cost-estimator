@@ -12,7 +12,7 @@ export function Navigation() {
 
     useEffect(() => {
     // Ensure the browser tab shows the correct site title
-    document.title = "My Interio World";
+    document.title = "Interio World";
   }, [])
 
   const links = [
@@ -33,7 +33,7 @@ export function Navigation() {
               <Home className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-foreground group-hover:opacity-80" />
             </motion.div>
             <span className="font-black text-lg sm:text-xl md:text-2xl text-foreground">
-              My Interio World
+              Interio World
             </span>
           </Link>
 

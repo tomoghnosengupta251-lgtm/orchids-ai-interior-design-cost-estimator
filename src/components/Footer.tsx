@@ -5,16 +5,16 @@ export function Footer() {
   return (
     <footer className="bg-foreground border-t border-background/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-12 md:py-16">
-          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 md:gap-12">
-            <div className="col-span-2 sm:col-span-2 lg:col-span-1">
-              <h3 className="text-xl sm:text-2xl font-black text-background mb-3 sm:mb-4">
-                My Interio World
-              </h3>
-              <p className="text-background/70 leading-relaxed text-sm sm:text-base">
-                Premium interior design and construction services in Kolkata.
-              </p>
-            </div>
-          
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 md:gap-12">
+          <div className="col-span-2 sm:col-span-2 lg:col-span-1">
+            <h3 className="text-xl sm:text-2xl font-black text-background mb-3 sm:mb-4">
+              Interio World
+            </h3>
+            <p className="text-background/70 leading-relaxed text-sm sm:text-base">
+              Premium interior design and construction services in Kolkata.
+            </p>
+          </div>
+
           <div>
             <h4 className="text-base sm:text-lg font-bold text-background mb-3 sm:mb-4">Quick Links</h4>
             <div className="space-y-2">
@@ -56,9 +56,9 @@ export function Footer() {
           </div>
         </div>
 
-          <div className="mt-8 sm:mt-10 md:mt-12 pt-6 sm:pt-8 border-t border-background/10 text-center text-background/50 text-xs sm:text-sm">
-            © 2025 My Interio World. All rights reserved.
-          </div>
+        <div className="mt-8 sm:mt-10 md:mt-12 pt-6 sm:pt-8 border-t border-background/10 text-center text-background/50 text-xs sm:text-sm">
+          © 2025 Interio World. All rights reserved.
+        </div>
       </div>
     </footer>
   )

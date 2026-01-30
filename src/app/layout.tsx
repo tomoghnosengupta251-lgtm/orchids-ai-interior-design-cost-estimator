@@ -17,8 +17,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "My Interio World",
-    template: "%s | My Interio World",
+    default: "Interio World",
+    template: "%s | Interio World",
   },
   description: "Premium interior design and construction services in Kolkata",
 };
@@ -31,12 +31,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <title>My Interio World</title>
+        <title>Interio World</title>
         <meta name="description" content="Premium interior design and construction services in Kolkata" />
       </head>
-        <body
-          className={`${inter.variable} ${geistMono.variable} antialiased`}
-        >
+      <body
+        className={`${inter.variable} ${geistMono.variable} antialiased`}
+      >
         <Script
           id="orchids-browser-logs"
           src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/scripts/orchids-browser-logs.js"
