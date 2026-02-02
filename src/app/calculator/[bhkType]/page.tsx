@@ -147,8 +147,8 @@ export default function CalculatorPage() {
             transition={{ duration: 0.5, ease: "easeOut" }}
             className="text-center mb-12"
           >
-            <h1 className="text-5xl md:text-8xl font-bold mb-4">
-              Customize Your <span className="text-foreground/40">{config.type.toUpperCase()}</span>
+            <h1 className="text-5xl md:text-8xl font-bold mb-4 leading-tight">
+              Customize Your <span className="block mt-2 text-foreground">{config.type.toUpperCase()}</span>
             </h1>
             <p className="text-xl text-foreground/70 font-medium max-w-2xl mx-auto">
               Select premium upgrades for your dream home and get an instant AI-powered cost estimate
