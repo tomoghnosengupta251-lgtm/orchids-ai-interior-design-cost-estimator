@@ -42,7 +42,7 @@ export function Footer() {
               </a>
               <div className="flex items-start gap-2 text-background/70">
                 <MapPin className="w-4 h-4 sm:w-5 sm:h-5 mt-0.5 flex-shrink-0" />
-                <span className="text-xs sm:text-sm">Boral Main Road, Kolkata 700103</span>
+                <span className="text-xs sm:text-sm">Mullickpara, Boral Main Road, Kolkata - 700103</span>
               </div>
             </div>
           </div>
