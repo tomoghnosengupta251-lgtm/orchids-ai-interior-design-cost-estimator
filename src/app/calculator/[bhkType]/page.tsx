@@ -25,10 +25,10 @@ export default function CalculatorPage() {
   const [showAuth, setShowAuth] = useState(false);
 
   const config = bhkConfigurations[bhkType];
-const handleLogout = async () => {
-  await fetch("/api/auth/logout", { method: "POST" });
-  window.location.reload();
-};
+  const handleLogout = async () => {
+    await fetch("/api/auth/logout", { method: "POST" });
+    window.location.reload();
+  };
 
   // Fetch logged-in user
   useEffect(() => {
@@ -111,33 +111,33 @@ const handleLogout = async () => {
     visible: { opacity: 1, y: 0 }
   };
 
-return (
-  <div className="min-h-screen bg-background text-foreground">
-    <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-2xl z-50 border-b border-foreground/10">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link
-          href="/"
-          className="flex items-center gap-2 text-foreground hover:opacity-70 transition-all hover:scale-105 group"
-        >
-          <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
-          <span className="font-bold">Back to Home</span>
-        </Link>
-        {/* show logout only if user is logged in */}
-        {user && (
-          <button
-            onClick={handleLogout}
-            className="text-sm font-semibold border border-foreground px-3 py-1 rounded-lg hover:bg-foreground hover:text-background transition-all"
+  return (
+    <div className="min-h-screen bg-background text-foreground">
+      <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-2xl z-50 border-b border-foreground/10">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+          <Link
+            href="/"
+            className="flex items-center gap-2 text-foreground hover:opacity-70 transition-all hover:scale-105 group"
           >
-            Logout
-          </button>
-        )}
-      </div>
-      <div className="max-w-7xl mx-auto px-6 py-4">
-        <Badge className="bg-foreground text-background px-5 py-2.5 text-sm font-bold shadow-lg shadow-black/20">
-          {config.type.toUpperCase()} - {config.sqftRange}
-        </Badge>
-      </div>
-    </nav>
+            <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
+            <span className="font-bold">Back to Home</span>
+          </Link>
+          {/* show logout only if user is logged in */}
+          {user && (
+            <button
+              onClick={handleLogout}
+              className="text-sm font-semibold border border-foreground px-3 py-1 rounded-lg hover:bg-foreground hover:text-background transition-all"
+            >
+              Logout
+            </button>
+          )}
+        </div>
+        <div className="max-w-7xl mx-auto px-6 py-4">
+          <Badge className="bg-foreground text-background px-5 py-2.5 text-sm font-bold shadow-lg shadow-black/20">
+            {config.type.toUpperCase()} - {config.sqftRange}
+          </Badge>
+        </div>
+      </nav>
 
       <div className="pt-24 pb-12 px-6">
         <div className="max-w-6xl mx-auto">
@@ -266,7 +266,7 @@ return (
                           </div>
                         </div>
                       ) : (
-                        <p className="text-center font-bold opacity-60">Login to reveal pricing</p>
+                        <p className="text-center font-bold opacity-60">click here to reveal pricing</p>
                       )}
                     </div>
 
