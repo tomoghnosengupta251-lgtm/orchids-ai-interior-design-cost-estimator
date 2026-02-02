@@ -78,11 +78,16 @@ export default function ContactPage() {
                   <MapPin className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-background" />
                 </div>
                 <h3 className="text-lg sm:text-xl font-black mb-2 sm:mb-3 text-foreground">Visit Us</h3>
-                <p className="text-foreground/60 text-xs sm:text-sm leading-relaxed">
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=My+Interio+World+Boral+Main+Road+Kolkata"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-foreground/60 text-xs sm:text-sm leading-relaxed hover:text-foreground transition-all block"
+                >
                   Interio world<br />
                   Mullickpara, Boral Main Road<br />
                   Kolkata - 700103
-                </p>
+                </a>
               </Card>
             </motion.div>
 
